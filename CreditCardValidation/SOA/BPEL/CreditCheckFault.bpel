@@ -1,0 +1,124 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Wed Jun 13 14:36:37 GST 2018
+  Author:  aelkhodary
+  Purpose: Synchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="CreditCheckFault"
+               targetNamespace="http://xmlns.oracle.com/POApplication/CreditCardValidation/CreditCheckFault"
+               xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+               xmlns:client="http://xmlns.oracle.com/POApplication/CreditCardValidation/CreditCheckFault"
+               xmlns:ora="http://schemas.oracle.com/xpath/extension"
+               xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+               xmlns:ns1="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:ui="http://xmlns.oracle.com/soa/designer"
+         xmlns:ns2="http://xmlns.oracle.com/pcbpel/adapter/db/POApplication/CreditCardValidation/CreditCardDBService"
+         xmlns:ns3="http://www.example.org/ns/ccauthorize"
+         xmlns:ns4="http://xmlns.oracle.com/pcbpel/adapter/db/top/CreditCardDBService"
+         xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc"
+         xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue"
+         xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath"
+         xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
+         xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:ess="http://xmlns.oracle.com/scheduler"
+         xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk"
+         xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
+         xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap">
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      PARTNERLINKS                                                      
+      List of services participating in this BPEL process               
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <import namespace="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+          location="../WSDLs/ValidateCreditCardWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"
+          ui:processWSDL="true"/>
+  <partnerLinks>
+    <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+    <partnerLink name="creditcheckfault_client" partnerLinkType="ns1:CreditCheckFault" myRole="validateCC_ptt"/>
+    <partnerLink name="CreditCardDBService" partnerLinkType="ns2:CreditCardDBService_plt"
+                 partnerRole="CreditCardDBService_role"/>
+  </partnerLinks>
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      VARIABLES                                                        
+      List of messages and XML documents used within this BPEL process 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <variables>
+    <!-- Reference to the message passed as input during initiation -->
+    <variable name="inputVariable" messageType="ns1:requestMessage"/>
+
+    <!-- Reference to the message that will be returned to the requester-->
+    <variable name="outputVariable" messageType="ns1:replyMessage"/>
+    <variable name="Invoke_ccservice_CreditCardDBServiceSelect_InputVariable"
+              messageType="ns2:CreditCardDBServiceSelect_inputParameters"/>
+    <variable name="Invoke_ccservice_CreditCardDBServiceSelect_OutputVariable"
+              messageType="ns2:CreditcardsCollection_msg"/>
+    <variable name="creditFault" messageType="ns1:faultMessage"/>
+  </variables>
+  <faultHandlers>
+    <catch faultName="ns1:validateCCfault" faultVariable="creditFault"
+           faultMessageType="ns1:faultMessage">
+      <sequence name="Sequence1">
+        <assign name="Assign_ccerror">
+          <copy>
+            <from>concat( 'Error: order total exceeds the credit limit of  ' ,$Invoke_ccservice_CreditCardDBServiceSelect_OutputVariable.CreditcardsCollection/ns4:Creditcards/ns4:creditLimit )</from>
+            <to>$creditFault.fault/ns3:error</to>
+          </copy>
+        </assign>
+        <reply name="Reply_ccerror" faultName="ns1:validateCCfault" variable="creditFault"
+               partnerLink="creditcheckfault_client" portType="ns1:validateCC_ptt" operation="validateCC"/>
+      </sequence>
+    </catch>
+  </faultHandlers>
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     ORCHESTRATION LOGIC                                               
+     Set of activities coordinating the flow of messages across the    
+     services integrated within this business process                  
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <sequence name="main">
+
+    <!-- Receive input from requestor. (Note: This maps to operation defined in CreditCheckFault.wsdl) -->
+    <receive name="receiveInput" partnerLink="creditcheckfault_client" portType="ns1:validateCC_ptt" operation="validateCC" variable="inputVariable" createInstance="yes"/>
+    <assign name="Assign_ccinfo">
+      <copy>
+        <from>$inputVariable.request/ns3:CCNumber</from>
+        <to>$Invoke_ccservice_CreditCardDBServiceSelect_InputVariable.CreditCardDBServiceSelect_inputParameters/ns4:ccNum</to>
+      </copy>
+    </assign>
+    <invoke name="Invoke_ccservice" partnerLink="CreditCardDBService"
+            portType="ns2:CreditCardDBService_ptt" operation="CreditCardDBServiceSelect"
+            inputVariable="Invoke_ccservice_CreditCardDBServiceSelect_InputVariable"
+            outputVariable="Invoke_ccservice_CreditCardDBServiceSelect_OutputVariable" bpelx:invokeAsDetail="no"/>
+    <assign name="Assign_ccstatus">
+      <copy>
+        <from>$Invoke_ccservice_CreditCardDBServiceSelect_OutputVariable.CreditcardsCollection/ns4:Creditcards/ns4:status</from>
+        <to>$outputVariable.response/ns3:status</to>
+      </copy>
+    </assign>
+    <if name="If_cclimit">
+      <documentation>
+        <![CDATA[Valid]]>
+      </documentation>
+      <condition>$outputVariable.response/ns3:status = 'VALID' and  number($inputVariable.request/ns3:amount) &gt; number($Invoke_ccservice_CreditCardDBServiceSelect_OutputVariable.CreditcardsCollection/ns4:Creditcards/ns4:creditLimit)</condition>
+      <throw name="Throw_validateccfault" faultName="ns1:validateCCfault" faultVariable="creditFault"/>
+    </if>
+    <!-- Generate reply to synchronous request -->
+    <reply name="replyOutput" partnerLink="creditcheckfault_client" portType="ns1:validateCC_ptt" operation="validateCC" variable="outputVariable"/>
+  </sequence>
+</process>

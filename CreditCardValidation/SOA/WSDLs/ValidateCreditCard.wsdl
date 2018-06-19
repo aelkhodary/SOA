@@ -1,0 +1,30 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="ValidateCreditCard"
+     targetNamespace="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+     xmlns:tns="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+     xmlns:inp1="http://www.example.org/ns/ccauthorize"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.example.org/ns/ccauthorize" schemaLocation="../Schemas/creditcheck.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="requestMessage">
+        <wsdl:part name="request" element="inp1:CreditCheckRequest"/>
+    </wsdl:message>
+    <wsdl:message name="replyMessage">
+        <wsdl:part name="response" element="inp1:CreditCheckResponse"/>
+    </wsdl:message>
+    <wsdl:message name="faultMessage">
+        <wsdl:part name="fault" element="inp1:CreditCheckFault"/>
+    </wsdl:message>
+    <wsdl:portType name="validateCC_ptt">
+        <wsdl:operation name="validateCC">
+            <wsdl:input message="tns:requestMessage"/>
+            <wsdl:output message="tns:replyMessage"/>
+            <wsdl:fault name="validateCCfault" message="tns:faultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

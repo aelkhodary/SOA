@@ -1,0 +1,15 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="OrdersService"
+     targetNamespace="/orderssdo/common/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:tns="/orderssdo/common/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="OrdersService">
+        <plnk:role name="OrdersService" portType="tns:OrdersService"/>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="/orderssdo/common/" location="http://localhost:8001/OrdersSDO/OrdersService?WSDL"/>
+</wsdl:definitions>

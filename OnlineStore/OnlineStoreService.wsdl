@@ -1,0 +1,16 @@
+<wsdl:definitions
+     name="OnlineStoreService"
+     targetNamespace="/onlinestoresdo/common/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="/onlinestoresdo/common/"
+     xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    >
+    <plnk:partnerLinkType name="OnlineStoreService_PL">
+        <plnk:role name="OnlineStoreService_Role">
+            <plnk:portType name="tns:OnlineStoreService"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="/onlinestoresdo/common/" location="http://localhost:8001/OnlineStoreSDO/OnlineStoreService?WSDL"/>
+</wsdl:definitions>

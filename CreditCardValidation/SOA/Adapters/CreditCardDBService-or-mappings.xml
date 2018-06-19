@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd">
+   <name>CreditCardDBService-OR</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="object-relational-class-mapping-descriptor">
+         <class>CreditCardDBService.Creditcards</class>
+         <alias>CREDITCARDS</alias>
+         <primary-key>
+            <field table="CREDITCARDS" name="CARD_NUMBER" xsi:type="column"/>
+         </primary-key>
+         <events/>
+         <querying>
+            <queries>
+               <query name="CreditCardDBServiceSelect" xsi:type="read-all-query">
+                  <criteria operator="equal" xsi:type="relation-expression">
+                     <left name="cardNumber" xsi:type="query-key-expression">
+                        <base xsi:type="base-expression"/>
+                     </left>
+                     <right xsi:type="parameter-expression">
+                        <parameter name="ccNum" xsi:type="column"/>
+                     </right>
+                  </criteria>
+                  <arguments>
+                     <argument name="ccNum">
+                        <type>java.lang.String</type>
+                     </argument>
+                  </arguments>
+                  <reference-class>CreditCardDBService.Creditcards</reference-class>
+                  <container xsi:type="list-container-policy">
+                     <collection-type>java.util.Vector</collection-type>
+                  </container>
+               </query>
+            </queries>
+         </querying>
+         <attribute-mappings>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>cardNumber</attribute-name>
+               <field table="CREDITCARDS" name="CARD_NUMBER" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>cardType</attribute-name>
+               <properties>
+                  <property name="enabled">
+                     <value>false</value>
+                  </property>
+               </properties>
+               <field table="CREDITCARDS" name="CARD_TYPE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>custId</attribute-name>
+               <properties>
+                  <property name="enabled">
+                     <value>false</value>
+                  </property>
+               </properties>
+               <field table="CREDITCARDS" name="CUST_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Integer</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>creditLimit</attribute-name>
+               <field table="CREDITCARDS" name="CREDIT_LIMIT" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>status</attribute-name>
+               <field table="CREDITCARDS" name="STATUS" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>rating</attribute-name>
+               <properties>
+                  <property name="enabled">
+                     <value>false</value>
+                  </property>
+               </properties>
+               <field table="CREDITCARDS" name="RATING" xsi:type="column"/>
+               <attribute-classification>java.lang.Integer</attribute-classification>
+            </attribute-mapping>
+         </attribute-mappings>
+         <descriptor-type>independent</descriptor-type>
+         <caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+            <always-refresh>true</always-refresh>
+         </caching>
+         <remote-caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+         </remote-caching>
+         <instantiation/>
+         <copying xsi:type="instantiation-copy-policy"/>
+         <tables>
+            <table name="CREDITCARDS"/>
+         </tables>
+         <structure>structureName</structure>
+      </class-mapping-descriptor>
+   </class-mapping-descriptors>
+   <login xsi:type="database-login">
+      <platform-class>org.eclipse.persistence.platform.database.oracle.Oracle9Platform</platform-class>
+      <connection-url></connection-url>
+   </login>
+</object-persistence>

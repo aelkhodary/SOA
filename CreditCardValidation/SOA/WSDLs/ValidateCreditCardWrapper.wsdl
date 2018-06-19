@@ -1,0 +1,16 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="ValidateCreditCard"
+     targetNamespace="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:tns="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="CreditCheckFault">
+        <plnk:role name="validateCC_ptt" portType="tns:validateCC_ptt"/>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+         location="ValidateCreditCard.wsdl"/>
+</wsdl:definitions>

@@ -1,0 +1,321 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Tue Jun 05 11:00:54 GST 2018
+  Author:  aelkhodary
+  Type: BPEL 2.0 Process
+  Purpose: Asynchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="FulfillmentPr"
+         targetNamespace="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+         xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+         xmlns:ora="http://schemas.oracle.com/xpath/extension"
+         xmlns:ui="http://xmlns.oracle.com/soa/designer"
+         xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+         xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:ns2="http://www.example.org/ns/intorder" xmlns:ns1="http://www.example.org/ns/fulfillment"
+         xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc"
+         xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue"
+         xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath"
+         xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
+         xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:ess="http://xmlns.oracle.com/scheduler"
+         xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk"
+         xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
+         xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap"
+         xmlns:ns3="http://xmlns.oracle.com/Application1/InStore/ManageInventory"
+         xmlns:ns4="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock"
+         xmlns:ns5="http://www.example.org/ns/store" xmlns:ns6="/orderssdo/common/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <import namespace="/orderssdo/common/types/"
+            location="http://localhost:8001/OrdersSDO/OrdersService?XSD=/orderssdo/common/serviceinterface/OrdersService.xsd"
+            importType="http://www.w3.org/2001/XMLSchema"/>
+    <import namespace="http://www.example.org/ns/fulfillment" location="../Schemas/fulfillment.xsd"
+            importType="http://www.w3.org/2001/XMLSchema"/>
+    <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr" location="../WSDLs/FulfillmentPr.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    --> 
+    <partnerLinks>
+        <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+        <partnerLink name="fulfillmentpr_client" partnerLinkType="client:FulfillmentPr" myRole="FulfillmentPrProvider" partnerRole="FulfillmentPrRequester"/>
+        <partnerLink name="InternalStore" partnerLinkType="ns3:ManageInventory" myRole="ManageInventoryRequester"
+                     partnerRole="ManageInventoryProvider"/>
+        <partnerLink name="OnlineStore" partnerLinkType="ns4:ManageStock" myRole="ManageStockRequester"
+                     partnerRole="ManageStockProvider"/>
+        <partnerLink name="OrdersService" partnerLinkType="ns6:OrdersService" partnerRole="OrdersService"/>
+    </partnerLinks>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        VARIABLES                                                        
+        List of messages and XML documents used within this BPEL process 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <variables>
+        <!-- Reference to the message passed as input during initiation -->
+        <variable name="inputVariable" messageType="client:FulfillmentPrRequestMessage"/>
+
+        <!-- Reference to the message that will be sent back to the requester during callback -->
+        <variable name="outputVariable" messageType="client:FulfillmentPrResponseMessage"/>
+        <variable name="orderData" element="ns6:ordersViewSDO"/>
+        <variable name="ordersEV" element="ns6:ordersViewSDO" bpelx:entity.si="OrdersService"/>
+    </variables>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ORCHESTRATION LOGIC                                               
+       Set of activities coordinating the flow of messages across the    
+       services integrated within this business process                  
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <sequence name="main">
+        <!-- Receive input from requestor. (Note: This maps to operation defined in FulfillmentPr.wsdl) -->
+        <receive name="receiveInput" partnerLink="fulfillmentpr_client" portType="client:FulfillmentPr" operation="process" variable="inputVariable" createInstance="yes"/>
+        <scope name="Scope_insertorder">
+            <sequence name="Sequence7">
+                <assign name="Assign_orderid">
+                    <copy>
+                        <from>oraext:sequence-next-val('ORDER_SEQ', 'jdbc/soademo')</from>
+                        <to>$inputVariable.payload/ns2:orderId</to>
+                    </copy>
+                </assign>
+                <assign name="Transformation__order">
+                    <bpelx:annotation>
+                        <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                    </bpelx:annotation>
+                    <copy>
+                        <from>ora:doXSLTransformForDoc("../Transformations/Transformation_order.xsl", $inputVariable.payload)</from>
+                        <to variable="orderData"/>
+                    </copy>
+                </assign>
+                <extensionActivity>
+                    <bpelx:createEntity name="CreateEntity_order" variable="ordersEV">
+                        <bpelx:fromExpression>$orderData</bpelx:fromExpression>
+                    </bpelx:createEntity>
+                </extensionActivity>
+            </sequence>
+        </scope>
+        <scope name="Scope_checkstock">
+            <variables>
+                <variable name="Invoke_internalstore_checkStock_InputVariable"
+                          messageType="ns3:ManageInventoryRequestMessage"/>
+                <variable name="Receive_internalstore_checkStockResponse_InputVariable"
+                          messageType="ns3:ManageInventoryResponseMessage"/>
+                <variable name="Invoke_onlinestore_checkStock_InputVariable"
+                          messageType="ns4:ManageStockRequestMessage"/>
+                <variable name="Receive_onlinstore_checkStockResponse_InputVariable"
+                          messageType="ns4:ManageStockResponseMessage"/>
+                <variable name="Invoke_acquireinternal_acquireStock_InputVariable"
+                          messageType="ns3:ManageInventoryRequestMessage"/>
+                <variable name="Receive_acquireinternal_acquireStockResponse_InputVariable"
+                          messageType="ns3:ManageInventoryResponseMessage"/>
+                <variable name="Invoke_acquireonline_acquireStock_InputVariable"
+                          messageType="ns4:ManageStockRequestMessage"/>
+                <variable name="Receive_acquireonline_checkStockResponse_InputVariable"
+                          messageType="ns4:ManageStockResponseMessage"/>
+            </variables>
+            <sequence name="Sequence4">
+                <flow name="Flow_checkstock">
+                    <sequence name="Sequence">
+                        <assign name="Transform_internalstore">
+                            <bpelx:annotation>
+                                <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                            </bpelx:annotation>
+                            <copy>
+                                <from>ora:doXSLTransformForDoc("../Transformations/Transformation_internalstore.xsl", $inputVariable.payload)</from>
+                                <to variable="Invoke_internalstore_checkStock_InputVariable" part="payload"/>
+                            </copy>
+                        </assign>
+                        <invoke name="Invoke_internalstore" partnerLink="InternalStore"
+                                portType="ns3:ManageInventory" operation="checkStock"
+                                inputVariable="Invoke_internalstore_checkStock_InputVariable"
+                                bpelx:invokeAsDetail="no"/>
+                        <receive name="Receive_internalstore" partnerLink="InternalStore"
+                                 portType="ns3:ManageInventoryCallback" operation="checkStockResponse"
+                                 variable="Receive_internalstore_checkStockResponse_InputVariable"/>
+                    </sequence>
+                    <sequence name="Sequence3">
+                        <assign name="Transformation_onlinestore">
+                            <bpelx:annotation>
+                                <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                            </bpelx:annotation>
+                            <copy>
+                                <from>ora:doXSLTransformForDoc("../Transformations/Transformation_onlinestore.xsl", $inputVariable.payload)</from>
+                                <to variable="Invoke_onlinestore_checkStock_InputVariable" part="payload"/>
+                            </copy>
+                        </assign>
+                        <invoke name="Invoke_onlinestore" partnerLink="OnlineStore"
+                                portType="ns4:ManageStock" operation="checkStock"
+                                inputVariable="Invoke_onlinestore_checkStock_InputVariable" bpelx:invokeAsDetail="no"/>
+                        <receive name="Receive_onlinstore" partnerLink="OnlineStore"
+                                 portType="ns4:ManageStockCallback" operation="checkStockResponse"
+                                 variable="Receive_onlinstore_checkStockResponse_InputVariable"/>
+                    </sequence>
+                </flow>
+                <if name="If_selectstore">
+                    <documentation>
+                        <![CDATA[internalstore=in-stock]]>
+                    </documentation>
+                    <condition>$Receive_internalstore_checkStockResponse_InputVariable.payload/ns5:status ='in-stock'</condition>
+                    <sequence name="Sequence5">
+                        <assign name="Assign_acquireinternal">
+                            <copy>
+                                <from variable="Invoke_internalstore_checkStock_InputVariable"/>
+                                <to variable="Invoke_acquireinternal_acquireStock_InputVariable"/>
+                            </copy>
+                            <copy>
+                                <from>'completed'</from>
+                                <to>$ordersEV/ns6:Status</to>
+                            </copy>
+                            <copy>
+                                <from>'completed'</from>
+                                <to>$outputVariable.payload/ns1:shipStatus</to>
+                            </copy>
+                        </assign>
+                        <invoke name="Invoke_acquireinternal" partnerLink="InternalStore"
+                                portType="ns3:ManageInventory" operation="acquireStock"
+                                inputVariable="Invoke_acquireinternal_acquireStock_InputVariable"
+                                bpelx:invokeAsDetail="no"/>
+                        <receive name="Receive_acquireinternal" partnerLink="InternalStore"
+                                 portType="ns3:ManageInventoryCallback" operation="acquireStockResponse"
+                                 variable="Receive_acquireinternal_acquireStockResponse_InputVariable"/>
+                    </sequence>
+                    <elseif>
+                        <documentation>
+                            <![CDATA[onlinestore=in-stock]]>
+                        </documentation>
+                        <condition>$Receive_onlinstore_checkStockResponse_InputVariable.payload/ns5:status= 'in-stock'</condition>
+                        <sequence name="Sequence6">
+                            <assign name="Assign_acquireonline">
+                                <copy>
+                                    <from variable="Invoke_onlinestore_checkStock_InputVariable"/>
+                                    <to variable="Invoke_acquireonline_acquireStock_InputVariable"/>
+                                </copy>
+                                <copy>
+                                    <from>'completed'</from>
+                                    <to>$ordersEV/ns6:Status</to>
+                                </copy>
+                                <copy>
+                                    <from>'completed'</from>
+                                    <to>$outputVariable.payload/ns1:shipStatus</to>
+                                </copy>
+                            </assign>
+                            <invoke name="Invoke_acquireonline" partnerLink="OnlineStore"
+                                    portType="ns4:ManageStock" operation="acquireStock"
+                                    inputVariable="Invoke_acquireonline_acquireStock_InputVariable"
+                                    bpelx:invokeAsDetail="no"/>
+                            <receive name="Receive_acquireonline" partnerLink="OnlineStore"
+                                     portType="ns4:ManageStockCallback" operation="acquireStockResponse"
+                                     variable="Receive_acquireonline_checkStockResponse_InputVariable"/>
+                        </sequence>
+                    </elseif>
+                    <else>
+                        <assign name="Assign_waiting">
+                            <copy>
+                                <from>'waiting'</from>
+                                <to>$outputVariable</to>
+                            </copy>
+                            <copy>
+                                <from>'none'</from>
+                                <to>$outputVariable.payload/ns1:carrier</to>
+                            </copy>
+                            <copy>
+                                <from>'waiting'</from>
+                                <to>$ordersEV/ns6:Status</to>
+                            </copy>
+                        </assign>
+                    </else>
+                </if>
+            </sequence>
+        </scope>
+        <if name="If_orderstatus">
+            <documentation>
+                <![CDATA[order completed?]]>
+            </documentation>
+            <condition>$outputVariable.payload/ns1:shipStatus='completed'</condition>
+            <scope name="Scope_shiporder">
+                <variables>
+                    <variable name="shippingRequest" element="ns1:ShippingRequest"/>
+                </variables>
+                <sequence name="Sequence1">
+                    <assign name="Assign_shiporder">
+                        <copy>
+                            <from>$inputVariable.payload/ns2:orderId</from>
+                            <to>$shippingRequest/ns1:orderId</to>
+                        </copy>
+                        <copy>
+                            <from>$inputVariable.payload/ns2:customerId</from>
+                            <to>$shippingRequest/ns1:custName</to>
+                        </copy>
+                        <copy>
+                            <from><literal><ns0:shippingAddress xmlns:ns0="http://www.example.org/ns/fulfillment">
+    <ns0:street/>
+    <ns0:city/>
+    <ns0:state/>
+    <ns0:zip/>
+    <ns0:country/>
+</ns0:shippingAddress></literal></from>
+                            <to>$shippingRequest/ns1:shippingAddress</to>
+                        </copy>
+                        <copy>
+                            <from>xp20:current-dateTime()</from>
+                            <to>$ordersEV/ns6:DateShipped</to>
+                        </copy>
+                    </assign>
+                    <if name="If_shiporder">
+                        <documentation>
+                            <![CDATA[UPS]]>
+                        </documentation>
+                        <condition>$inputVariable.payload/ns2:shipMethod='two_day'</condition>
+                        <sequence name="Sequence2">
+                            <empty name="Invoke_UPS"/>
+                        </sequence>
+                        <elseif>
+                            <documentation>
+                                <![CDATA[USPS]]>
+                            </documentation>
+                            <condition>$inputVariable.payload/ns2:shipMethod ='five_day'</condition>
+                            <empty name="Empty3"/>
+                        </elseif>
+                        <elseif>
+                            <documentation>
+                                <![CDATA[FedEx]]>
+                            </documentation>
+                            <condition>$inputVariable.payload/ns2:shipMethod ='next_day' or $inputVariable.payload/ns2:shipMethod='international'</condition>
+                            <empty name="Empty4"/>
+                        </elseif>
+                        <else>
+                            <assign name="Assign_shipstatus">
+                                <copy>
+                                    <from>'none'</from>
+                                    <to>$outputVariable.payload/ns1:shipStatus</to>
+                                </copy>
+                                <copy>
+                                    <from>'none'</from>
+                                    <to>$outputVariable.payload/ns1:carrier</to>
+                                </copy>
+                            </assign>
+                        </else>
+                    </if>
+                </sequence>
+            </scope>
+        </if>
+        <!-- 
+          Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
+        -->
+        <invoke name="callbackClient" partnerLink="fulfillmentpr_client" portType="client:FulfillmentPrCallback" operation="processResponse" inputVariable="outputVariable"/>
+    </sequence>
+</process>

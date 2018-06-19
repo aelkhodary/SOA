@@ -1,0 +1,16 @@
+<wsdl:definitions
+     name="InteralStoreService"
+     targetNamespace="/internalstoresdo/common/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="/internalstoresdo/common/"
+     xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    >
+    <plnk:partnerLinkType name="InternalStoreService">
+        <plnk:role name="InteralStoreService">
+            <plnk:portType name="tns:InteralStoreService"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="/internalstoresdo/common/" location="http://localhost:8001/InternalStoreSDO/InteralStoreService?WSDL"/>
+</wsdl:definitions>

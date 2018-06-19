@@ -1,0 +1,46 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="FulfillmentPr"
+     targetNamespace="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+     xmlns:ns1="http://www.example.org/ns/fulfillment"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:ns2="/orderssdo/common/types/"
+     xmlns:ns3="/customersdo/common/types/"
+    >
+    <plnk:partnerLinkType name="FulfillmentPr">
+        <plnk:role name="FulfillmentPrProvider" portType="client:FulfillmentPr"/>
+        <plnk:role name="FulfillmentPrRequester" portType="client:FulfillmentPrCallback"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+             xmlns:ns1="http://www.example.org/ns/fulfillment" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+             xmlns:ns2="/orderssdo/common/types/" xmlns:ns3="/customersdo/common/types/">
+            <import namespace="http://www.example.org/ns/fulfillment" schemaLocation="../Schemas/fulfillment.xsd"/>
+        </schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+             xmlns:ns1="http://www.example.org/ns/fulfillment" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+             xmlns:ns2="/orderssdo/common/types/" xmlns:ns3="/customersdo/common/types/">
+            <xsd:import namespace="/orderssdo/common/types/" schemaLocation="http://localhost:8001/OrdersSDO/OrdersService?XSD=/orderssdo/common/serviceinterface/OrdersService.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="FulfillmentPrRequestMessage">
+        <wsdl:part name="payload" element="ns1:FulFillmentRequest"/>
+    </wsdl:message>
+    <wsdl:message name="FulfillmentPrResponseMessage">
+        <wsdl:part name="payload" element="ns1:FulfillmentResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="FulfillmentPr">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:FulfillmentPrRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="FulfillmentPrCallback">
+        <wsdl:operation name="processResponse">
+            <wsdl:input message="client:FulfillmentPrResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

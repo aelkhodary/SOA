@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="CREDITCARDS.RATING:db_column_precision">2</entry>
+   <entry key="CREDITCARDS.CARD_NUMBER:db_column_not_null">true</entry>
+   <entry key="CREDITCARDS.CUST_ID:db_column_not_null">true</entry>
+   <entry key="CREDITCARDS.CREDIT_LIMIT:db_column_precision">9</entry>
+   <entry key="CREDITCARDS.CUST_ID:db_column_precision">6</entry>
+   <entry key="CREDITCARDS.CARD_NUMBER:db_column_type">VARCHAR2</entry>
+   <entry key="CREDITCARDS.CARD_TYPE:db_column_size">10</entry>
+   <entry key="CREDITCARDS:db_column_5">RATING</entry>
+   <entry key="CREDITCARDS:db_column_4">STATUS</entry>
+   <entry key="CREDITCARDS:db_column_3">CREDIT_LIMIT</entry>
+   <entry key="CREDITCARDS.STATUS:db_column_size">20</entry>
+   <entry key="CREDITCARDS:db_column_2">CUST_ID</entry>
+   <entry key="CREDITCARDS:db_column_1">CARD_TYPE</entry>
+   <entry key="CREDITCARDS.CARD_TYPE:db_column_not_null">true</entry>
+   <entry key="CREDITCARDS:db_column_0">CARD_NUMBER</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="CREDITCARDS.CUST_ID:db_column_scale">0</entry>
+   <entry key="CREDITCARDS:db_table_type">TABLE</entry>
+   <entry key="CREDITCARDS.CREDIT_LIMIT:db_column_type">NUMBER</entry>
+   <entry key="CREDITCARDS.RATING:db_column_scale">0</entry>
+   <entry key="CREDITCARDS.CARD_NUMBER:db_column_size">20</entry>
+   <entry key="CREDITCARDS.STATUS:db_column_not_null">true</entry>
+   <entry key="CREDITCARDS.RATING:db_column_type">NUMBER</entry>
+   <entry key="root_descriptor_alias">CREDITCARDS</entry>
+   <entry key="CREDITCARDS.CREDIT_LIMIT:db_column_scale">2</entry>
+   <entry key="CREDITCARDS.CARD_TYPE:db_column_type">VARCHAR2</entry>
+   <entry key="CREDITCARDS.CREDIT_LIMIT:db_column_not_null">true</entry>
+   <entry key="CREDITCARDS.CUST_ID:db_column_type">NUMBER</entry>
+   <entry key="CREDITCARDS.STATUS:db_column_type">VARCHAR2</entry>
+   <entry key="CREDITCARDS.RATING:db_column_not_null">false</entry>
+</properties>

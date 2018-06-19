@@ -1,0 +1,260 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Fri Aug 14 17:50:19 EST 2009
+  Author:  gstokol
+  Purpose: Asynchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="ManageInventory"
+         targetNamespace="http://xmlns.oracle.com/Application1/InStore/ManageInventory"
+         xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:client="http://xmlns.oracle.com/Application1/InStore/ManageInventory"
+         xmlns:ora="http://schemas.oracle.com/xpath/extension"
+         xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc"
+         xmlns:xpath20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20"
+         xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap"
+         xmlns:ui="http://xmlns.oracle.com/soa/designer/"
+         xmlns:task="http://xmlns.oracle.com/bpel/workflow/task"
+         xmlns:taskservice="http://xmlns.oracle.com/bpel/workflow/taskService"
+         xmlns:wfcommon="http://xmlns.oracle.com/bpel/workflow/common"
+         xmlns:wf="http://schemas.oracle.com/bpel/extension/workflow"
+         xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk"
+         xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue"
+         xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
+         xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:ns1="http://www.example.org/ns/store"
+         xmlns:ns2="/internalstoresdo/common/"
+         xmlns:ns3="/internalstoresdo/common/types/"
+         xmlns:mhdr="http://www.oracle.com/XSL/Transform/java/oracle.tip.mediator.service.common.functions.MediatorExtnFunction"
+         xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath"
+         xmlns:med="http://schemas.oracle.com/mediator/xpath"
+         xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
+         xmlns:socket="http://www.oracle.com/XSL/Transform/java/oracle.tip.adapter.socket.ProtocolTranslator"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:bpel2="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:ess="http://xmlns.oracle.com/scheduler">
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <bpelx:annotation>
+        <bpelx:analysis>
+            <bpelx:property name="wsdlFile">
+                <![CDATA[ManageInventory.wsdl]]>
+            </bpelx:property>
+        </bpelx:analysis>
+    </bpelx:annotation>
+    <partnerLinks>
+        <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+        <partnerLink name="manageinventory_client" partnerLinkType="client:ManageInventory" myRole="ManageInventoryProvider" partnerRole="ManageInventoryRequester"/>
+        <partnerLink name="InternalStoreService"
+                     partnerRole="InteralStoreService"
+                     partnerLinkType="ns2:InternalStoreService"/>
+    </partnerLinks>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        VARIABLES                                                        
+        List of messages and XML documents used within this BPEL process 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <variables>
+        <!-- Reference to the message passed as input during initiation -->
+        <variable name="inputVariable" messageType="client:ManageInventoryRequestMessage"/>
+
+        <!-- Reference to the message that will be sent back to the requester during callback -->
+        <variable name="outputVariable" messageType="client:ManageInventoryResponseMessage"/>
+        <variable name="Invoke_checkinstore_getInternalStoreView1_InputVariable"
+                  messageType="ns2:InteralStoreService_getInternalStoreView1"/>
+        <variable name="Invoke_checkinstore_getInternalStoreView1_OutputVariable"
+                  messageType="ns2:InteralStoreService_getInternalStoreView1Response"/>
+        <variable name="inStock" type="xsd:boolean"/>
+        <variable name="n" type="xsd:int"/>
+        <variable name="operation" type="xsd:string"/>
+        <variable name="Invoke_updstock_updateInternalStoreView1_InputVariable"
+                  messageType="ns2:InteralStoreService_updateInternalStoreView1"/>
+        <variable name="Invoke_updstock_updateInternalStoreView1_OutputVariable"
+                  messageType="ns2:InteralStoreService_updateInternalStoreView1Response"/>
+    </variables>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ORCHESTRATION LOGIC                                               
+       Set of activities coordinating the flow of messages across the    
+       services integrated within this business process                  
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <sequence name="main">
+        <!-- Receive input from requestor. (Note: This maps to operation defined in ManageInventory.wsdl) -->
+
+        <!-- 
+          Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
+        -->
+        <pick name="Pick_operation" createInstance="yes">
+            <onMessage variable="inputVariable" partnerLink="manageinventory_client" portType="client:ManageInventory"
+                       operation="checkStock" bpelx:name="OnMessage_CheckStock">
+                <assign name="Assign_checkstock">
+                    <copy>
+                        <from expression="'check'"/>
+                        <to variable="operation"/>
+                    </copy>
+                </assign>
+            </onMessage>
+            <onMessage bpelx:name="OnMessage_AquireStock" variable="inputVariable"
+                       partnerLink="manageinventory_client" portType="client:ManageInventory" operation="acquireStock">
+                <assign name="Assign_acquirestock">
+                    <copy>
+                        <from expression="'acquire'"/>
+                        <to variable="operation"/>
+                    </copy>
+                </assign>
+            </onMessage>
+        </pick>
+        <assign name="Assign_initialize">
+            <copy>
+                <from expression="count(bpws:getVariableData('inputVariable','payload','/ns1:StoreRequest/ns1:product'))"/>
+                <to variable="n"/>
+            </copy>
+            <copy>
+                <from expression="true()"/>
+                <to variable="inStock"/>
+            </copy>
+        </assign>
+        <while name="While"
+               condition="bpws:getVariableData('n')> 0 and bpws:getVariableData('inStock') = true()">
+            <sequence>
+                <sequence name="Sequence5">
+                    <assign name="Assign_prodId">
+                        <copy bpelx:ignoreMissingFromData="yes">
+                            <from variable="inputVariable" part="payload"
+                                  query="/ns1:StoreRequest/ns1:product[position()=$n]/ns1:prodId"/>
+                            <to variable="Invoke_checkinstore_getInternalStoreView1_InputVariable" part="parameters"
+                                query="/ns3:getInternalStoreView1/ns3:prodId"/>
+                        </copy>
+                    </assign>
+                    <invoke name="Invoke_checkinstore"
+                            inputVariable="Invoke_checkinstore_getInternalStoreView1_InputVariable"
+                            outputVariable="Invoke_checkinstore_getInternalStoreView1_OutputVariable"
+                            partnerLink="InternalStoreService" portType="ns2:InteralStoreService"
+                            operation="getInternalStoreView1"/>
+                    <switch name="Switch_between_check_acquire">
+                        <case condition="bpws:getVariableData('operation') = 'check'">
+                            <bpelx:annotation>
+                                <bpelx:general>
+                                    <bpelx:property name="userLabel">
+                                        <![CDATA[Ckeck Operation]]>
+                                    </bpelx:property>
+                                </bpelx:general>
+                            </bpelx:annotation>
+                            <assign name="Assign_prodinstock">
+                                <copy>
+                                    <from expression="number(bpws:getVariableData('Invoke_checkinstore_getInternalStoreView1_OutputVariable','parameters','/ns3:getInternalStoreView1Response/ns3:result/ns2:Quantity')) - number(bpws:getVariableData('inputVariable','payload','/ns1:StoreRequest/ns1:product[position()=$n]/ns1:qtyOrdered')) >= 0"/>
+                                    <to variable="inStock"/>
+                                </copy>
+                            </assign>
+                        </case>
+                        <otherwise>
+                            <sequence name="Sequence1">
+                                <assign name="Assign_updstock">
+                                    <copy>
+                                        <from variable="inputVariable" part="payload"
+                                              query="/ns1:StoreRequest/ns1:product[position()=$n]/ns1:prodId"/>
+                                        <to variable="Invoke_updstock_updateInternalStoreView1_InputVariable"
+                                            part="parameters"
+                                            query="/ns3:updateInternalStoreView1/ns3:internalStoreView1/ns2:ProdId"/>
+                                    </copy>
+                                    <copy>
+                                        <from expression="bpws:getVariableData('Invoke_checkinstore_getInternalStoreView1_OutputVariable','parameters','/ns3:getInternalStoreView1Response/ns3:result/ns2:Quantity') - bpws:getVariableData('inputVariable','payload','/ns1:StoreRequest/ns1:product[position()=$n]/ns1:qtyOrdered')"/>
+                                        <to variable="Invoke_updstock_updateInternalStoreView1_InputVariable"
+                                            part="parameters"
+                                            query="/ns3:updateInternalStoreView1/ns3:internalStoreView1/ns2:Quantity"/>
+                                    </copy>
+                                </assign>
+                                <invoke name="Invoke_updstock"
+                                        inputVariable="Invoke_updstock_updateInternalStoreView1_InputVariable"
+                                        outputVariable="Invoke_updstock_updateInternalStoreView1_OutputVariable"
+                                        partnerLink="InternalStoreService" portType="ns2:InteralStoreService"
+                                        operation="updateInternalStoreView1"/>
+                            </sequence>
+                        </otherwise>
+                    </switch>
+                    <assign name="Assign_next_n">
+                        <copy>
+                            <from expression="bpws:getVariableData('n') -1"/>
+                            <to variable="n"/>
+                        </copy>
+                    </assign>
+                </sequence>
+            </sequence>
+        </while>
+        <switch name="Switch1">
+            <case condition="bpws:getVariableData('operation')='check'">
+                <bpelx:annotation>
+                    <bpelx:general>
+                        <bpelx:property name="userLabel">
+                            <![CDATA[Case Operation]]>
+                        </bpelx:property>
+                    </bpelx:general>
+                </bpelx:annotation>
+                <sequence name="Sequence4">
+                    <switch name="Switch_instock">
+                        <case condition="bpws:getVariableData('inStock') = true()">
+                            <bpelx:annotation>
+                                <bpelx:pattern>inStock</bpelx:pattern>
+                                <bpelx:general>
+                                    <bpelx:property name="userLabel">
+                                        <![CDATA[caes in stock]]>
+                                    </bpelx:property>
+                                </bpelx:general>
+                            </bpelx:annotation>
+                            <sequence>
+                                <assign name="Assign_instock">
+                                    <copy>
+                                        <from expression="'in-stock'"/>
+                                        <to variable="outputVariable" part="payload"
+                                            query="/ns1:StoreResponse/ns1:status"/>
+                                    </copy>
+                                </assign>
+                            </sequence>
+                        </case>
+                        <otherwise>
+                            <assign name="Assign_outofstock">
+                                <copy>
+                                    <from expression="'out-of-stock'"/>
+                                    <to variable="outputVariable" part="payload" query="/ns1:StoreResponse/ns1:status"/>
+                                </copy>
+                            </assign>
+                        </otherwise>
+                    </switch>
+                    <invoke name="callback" inputVariable="outputVariable" partnerLink="manageinventory_client"
+                            portType="client:ManageInventoryCallback" operation="checkStockResponse"/>
+                </sequence>
+            </case>
+            <otherwise>
+                <sequence name="Sequence3">
+                    <assign name="Assign_fulfilled">
+                        <copy>
+                            <from expression="'fulfilled'"/>
+                            <to variable="outputVariable" part="payload" query="/ns1:StoreResponse/ns1:status"/>
+                        </copy>
+                    </assign>
+                    <invoke name="callbackClient_fulfilled" inputVariable="outputVariable"
+                            partnerLink="manageinventory_client" portType="client:ManageInventoryCallback"
+                            operation="checkStockResponse"/>
+                </sequence>
+            </otherwise>
+        </switch>
+    </sequence>
+</process>

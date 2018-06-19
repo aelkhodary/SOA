@@ -1,0 +1,179 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Tue Jun 05 10:41:34 GST 2018
+  Author:  aelkhodary
+  Type: BPEL 2.0 Process
+  Purpose: Asynchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="ApproveCCOrder"
+         targetNamespace="http://xmlns.oracle.com/POApplication/POProcessing/ApproveCCOrder"
+         xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/ApproveCCOrder"
+         xmlns:ora="http://schemas.oracle.com/xpath/extension"
+         xmlns:ui="http://xmlns.oracle.com/soa/designer"
+         xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+         xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:ns1="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
+         xmlns:ns2="http://www.example.org/ns/intorder"
+         xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc"
+         xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue"
+         xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath"
+         xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
+         xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:ess="http://xmlns.oracle.com/scheduler"
+         xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk"
+         xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
+         xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap"
+         xmlns:ns3="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
+         xmlns:ns4="http://www.example.org/ns/ccauthorize" xmlns:ns5="http://www.example.org/ns/fulfillment">
+
+    <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/POApplication/POProcessing/ApproveCCOrder" location="../WSDLs/ApproveCCOrder.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    --> 
+    <partnerLinks>
+        <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+        <partnerLink name="approveccorder_client" partnerLinkType="client:ApproveCCOrder" myRole="ApproveCCOrderProvider" partnerRole="ApproveCCOrderRequester"/>
+        <partnerLink name="FulfillmentPr.fulfillmentpr_client" partnerLinkType="ns1:FulfillmentPr"
+                     partnerRole="FulfillmentPrProvider" myRole="FulfillmentPrRequester"/>
+        <partnerLink name="ValidateCCService" partnerLinkType="ns3:ValidateCCService" partnerRole="validateCC_ptt"/>
+    </partnerLinks>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        VARIABLES                                                        
+        List of messages and XML documents used within this BPEL process 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <variables>
+        <!-- Reference to the message passed as input during initiation -->
+        <variable name="inputVariable" messageType="client:ApproveCCOrderRequestMessage"/>
+
+        <!-- Reference to the message that will be sent back to the requester during callback -->
+        <variable name="outputVariable" messageType="client:ApproveCCOrderResponseMessage"/>
+    </variables>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ORCHESTRATION LOGIC                                               
+       Set of activities coordinating the flow of messages across the    
+       services integrated within this business process                  
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <sequence name="main">
+        <!-- Receive input from requestor. (Note: This maps to operation defined in ApproveCCOrder.wsdl) -->
+        <receive name="receiveInput" partnerLink="approveccorder_client" portType="client:ApproveCCOrder" operation="process" variable="inputVariable" createInstance="yes"/>
+        <assign name="Assign_orderinfo">
+            <copy>
+                <from>$inputVariable.payload</from>
+                <to>$outputVariable.payload</to>
+            </copy>
+        </assign>
+        <scope name="Scope_validatecc">
+            <variables>
+                <variable name="Invoke_validatecc_validateCC_InputVariable" messageType="ns3:requestMessage"/>
+                <variable name="Invoke_validatecc_validateCC_OutputVariable" messageType="ns3:replyMessage"/>
+            </variables>
+            <faultHandlers>
+                <catch faultName="ns3:validateCCfault" faultVariable="creditFault" faultElement="ns4:CreditCheckFault">
+                    <sequence name="Sequence4">
+                        <assign name="Assign_rejected_element">
+                            <copy>
+                                <from>'rejected_order'</from>
+                                <to>$outputVariable.payload/ns2:status</to>
+                            </copy>
+                        </assign>
+                    </sequence>
+                </catch>
+                <catchAll>
+                    <sequence name="Sequence3">
+                        <assign name="Assign_rejected">
+                            <copy>
+                                <from>'rejected'</from>
+                                <to>$outputVariable.payload/ns2:status</to>
+                            </copy>
+                        </assign>
+                    </sequence>
+                </catchAll>
+            </faultHandlers>
+            <sequence name="Sequence1">
+                <assign name="Assign_ccinfo">
+                    <copy>
+                        <from>$inputVariable.payload/ns2:creditCard/ns2:cardNumber</from>
+                        <to>$Invoke_validatecc_validateCC_InputVariable.request/ns4:CCNumber</to>
+                    </copy>
+                    <copy>
+                        <from>$inputVariable.payload/ns2:orderTotal</from>
+                        <to>$Invoke_validatecc_validateCC_InputVariable.request/ns4:amount</to>
+                    </copy>
+                </assign>
+                <invoke name="Invoke_validatecc" partnerLink="ValidateCCService"
+                        portType="ns3:validateCC_ptt" operation="validateCC"
+                        inputVariable="Invoke_validatecc_validateCC_InputVariable"
+                        outputVariable="Invoke_validatecc_validateCC_OutputVariable" bpelx:invokeAsDetail="no"/>
+                <if name="check_cc_status">
+                    <documentation>
+                        <![CDATA[Valid]]>
+                    </documentation>
+                    <condition>$Invoke_validatecc_validateCC_OutputVariable.response/ns4:status = 'VALID'</condition>
+                    <scope name="Scope_fullfilment">
+                        <variables>
+                            <variable name="fulfillmentRequest" messageType="ns1:FulfillmentPrRequestMessage"/>
+                            <variable name="fulfillmentResponse" messageType="ns1:FulfillmentPrResponseMessage"/>
+                        </variables>
+                        <sequence name="Sequence2">
+                            <assign name="Transformation_fulfillment">
+                                <bpelx:annotation>
+                                    <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                                </bpelx:annotation>
+                                <copy>
+                                    <from>ora:doXSLTransformForDoc("../Transformations/Transformation_to_fulfillment.xsl", $outputVariable.payload)</from>
+                                    <to variable="fulfillmentRequest" part="payload"/>
+                                </copy>
+                            </assign>
+                            <invoke name="Invoke_fulfillment"
+                                    partnerLink="FulfillmentPr.fulfillmentpr_client" portType="ns1:FulfillmentPr"
+                                    operation="process" inputVariable="fulfillmentRequest" bpelx:invokeAsDetail="no"/>
+                            <receive name="Receive_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
+                                     portType="ns1:FulfillmentPrCallback" operation="processResponse"
+                                     variable="fulfillmentResponse"/>
+                            <assign name="Assign_fulfillment_status">
+                                <copy>
+                                    <from>$fulfillmentResponse.payload/ns5:shipStatus</from>
+                                    <to>$outputVariable.payload/ns2:status</to>
+                                </copy>
+                            </assign>
+                        </sequence>
+                    </scope>
+                    <else>
+                        <documentation>
+                            <![CDATA[Invalid]]>
+                        </documentation>
+                        <assign name="Assign_invalidcc">
+                            <copy>
+                                <from>'invalid credit card'</from>
+                                <to>$outputVariable.payload/ns2:status</to>
+                            </copy>
+                        </assign>
+                    </else>
+                </if>
+            </sequence>
+        </scope>
+        <!-- 
+          Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
+        -->
+        <invoke name="callbackClient" partnerLink="approveccorder_client" portType="client:ApproveCCOrderCallback" operation="processResponse" inputVariable="outputVariable"/>
+    </sequence>
+</process>

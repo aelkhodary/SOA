@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/CreditCardDBService" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/CreditCardDBService" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="CreditcardsCollection" type="CreditcardsCollection"/>
+   <xs:complexType name="CreditcardsCollection">
+      <xs:sequence>
+         <xs:element name="Creditcards" type="Creditcards" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Creditcards">
+      <xs:sequence>
+         <xs:element name="cardNumber" type="string20"/>
+         <xs:element name="creditLimit" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="status" type="string20" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="CreditCardDBServiceSelect_ccNumInputParameters" type="CreditCardDBServiceSelect_ccNum"/>
+   <xs:complexType name="CreditCardDBServiceSelect_ccNum">
+      <xs:sequence>
+         <xs:element name="ccNum" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="string20">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="20"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
