@@ -4,14 +4,17 @@
    <annotationfile/>
    <iconize/>
    <partnerlink_locations>
-      <partnerlink name="fulfillmentpr_client" x="4" y="1162" side="left"/>
-      <partnerlink name="InternalStore" x="1148" y="984" side="right"/>
-      <partnerlink name="OnlineStore" x="1148" y="1041" side="right"/>
+      <partnerlink name="fulfillmentpr_client" x="4" y="1178" side="left"/>
+      <partnerlink name="CustomerService" x="4" y="97" side="left"/>
+      <partnerlink name="InternalStore" x="1148" y="1016" side="right"/>
+      <partnerlink name="OrdersService" x="1148" y="97" side="right"/>
+      <partnerlink name="OnlineStore" x="1148" y="1073" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,0,1264,587" show_swimlanes="true">
+   <graph_layout viewport="0,0,1264,520" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope[1]" type="scope" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope[1]/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope[2]" type="scope" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope[2]/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope[2]/sequence/flow" type="flow"/>

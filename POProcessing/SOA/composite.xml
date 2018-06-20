@@ -35,6 +35,9 @@
   <import namespace="/orderssdo/common/" location="http://localhost:8001/OrdersSDO/OrdersService?WSDL"
           importType="wsdl"/>
   <import namespace="/orderssdo/common/" location="WSDLs/OrdersServiceWrapper.wsdl" importType="wsdl"/>
+  <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
+          importType="wsdl"/>
+  <import namespace="/customersdo/common/" location="WSDLs/CustomerSDOServiceWrapper.wsdl" importType="wsdl"/>
   <service name="ReceivePO" ui:wsdlLocation="WSDLs/ReceivePO.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.endpoint(ReceivePO/execute_pt)">
@@ -109,6 +112,9 @@
       <reference name="OrdersService" ui:wsdlLocation="WSDLs/OrdersServiceWrapper.wsdl">
         <interface.wsdl interface="/orderssdo/common/#wsdl.interface(OrdersService)"/>
       </reference>
+      <reference name="CustomerService" ui:wsdlLocation="WSDLs/CustomerSDOServiceWrapper.wsdl">
+        <interface.wsdl interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
+      </reference>
     </componentType>
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string" many="false">async.persist</property>
   </component>
@@ -155,6 +161,13 @@
       <property name="weblogic.wsee.wsat.transaction.flowOption" type="xs:string" many="false">WSDLDriven</property>
     </binding.ws>
   </reference>
+  <reference name="CustomerService" ui:wsdlLocation="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL">
+    <interface.wsdl interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
+    <binding.ws port="/customersdo/common/#wsdl.endpoint(CustomerSDOService/CustomerSDOServiceSoapHttpPort)"
+                location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL" soapVersion="1.1">
+      <property name="weblogic.wsee.wsat.transaction.flowOption" type="xs:string" many="false">WSDLDriven</property>
+    </binding.ws>
+  </reference>
   <wire>
     <source.uri>ReceivePO</source.uri>
     <target.uri>RoutePO/RoutePO</target.uri>
@@ -194,5 +207,9 @@
   <wire>
     <source.uri>FulfillmentPr/OrdersService</source.uri>
     <target.uri>OrdersService</target.uri>
+  </wire>
+  <wire>
+    <source.uri>FulfillmentPr/CustomerService</source.uri>
+    <target.uri>CustomerService</target.uri>
   </wire>
 </composite>

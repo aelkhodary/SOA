@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
     <dgm:gService name="ReceivePO">
-        <dgm:body borderWidth="2" arcRad="20" X="21" Y="203" width="137" height="84">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="242" width="137" height="84">
             <dgm:borderColor r="153" g="153" b="153"/>
             <dgm:bgColor r="255" g="255" b="255"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="11" Y="196" width="156" height="98">
+        <dgm:shadow arcRad="20" X="11" Y="235" width="156" height="98">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:outputPort name="ReceivePO" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
@@ -105,13 +105,42 @@
             <dgm:item>processCSOrdersView1</dgm:item>
         </dgm:operations>
     </dgm:gReference>
+    <dgm:gReference name="CustomerService">
+        <dgm:body borderWidth="2" arcRad="20" X="1112" Y="797" width="136" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="1102" Y="790" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="CustomerService" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>getAddressView1</dgm:item>
+            <dgm:item>createAddressView1</dgm:item>
+            <dgm:item>updateAddressView1</dgm:item>
+            <dgm:item>deleteAddressView1</dgm:item>
+            <dgm:item>mergeAddressView1</dgm:item>
+            <dgm:item>findAddressView1</dgm:item>
+            <dgm:item>processAddressView1</dgm:item>
+            <dgm:item>processCSAddressView1</dgm:item>
+            <dgm:item>getCustomersView1</dgm:item>
+            <dgm:item>createCustomersView1</dgm:item>
+            <dgm:item>updateCustomersView1</dgm:item>
+            <dgm:item>deleteCustomersView1</dgm:item>
+            <dgm:item>mergeCustomersView1</dgm:item>
+            <dgm:item>findCustomersView1</dgm:item>
+            <dgm:item>processCustomersView1</dgm:item>
+            <dgm:item>processCSCustomersView1</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
     <dgm:gComponent name="RoutePO">
-        <dgm:body borderWidth="2" arcRad="20" X="299" Y="188" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="299" Y="227" width="130" height="61">
             <dgm:borderColor r="128" g="92" b="148"/>
             <dgm:lightBgColor r="208" g="169" b="227"/>
             <dgm:darkBgColor r="183" g="132" b="212"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="289" Y="181" width="150" height="77">
+        <dgm:shadow arcRad="20" X="289" Y="220" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="RoutePO" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
@@ -119,12 +148,12 @@
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/mediator/resource/image/mediator_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="EnrichPO">
-        <dgm:body borderWidth="2" arcRad="20" X="570" Y="188" width="130" height="111">
+        <dgm:body borderWidth="2" arcRad="20" X="570" Y="227" width="130" height="111">
             <dgm:borderColor r="128" g="92" b="148"/>
             <dgm:lightBgColor r="208" g="169" b="227"/>
             <dgm:darkBgColor r="183" g="132" b="212"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="560" Y="181" width="150" height="127">
+        <dgm:shadow arcRad="20" X="560" Y="220" width="150" height="127">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="EnrichPO" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/POApplication/POProcessing/EnrichPO#wsdl.interface(execute_ptt)"/>
@@ -148,40 +177,41 @@
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="FulfillmentPr">
-        <dgm:body borderWidth="2" arcRad="20" X="841" Y="454" width="130" height="111">
+        <dgm:body borderWidth="2" arcRad="20" X="841" Y="534" width="130" height="136">
             <dgm:borderColor r="69" g="113" b="140"/>
             <dgm:lightBgColor r="166" g="208" b="230"/>
             <dgm:darkBgColor r="99" g="162" b="201"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="831" Y="447" width="150" height="127">
+        <dgm:shadow arcRad="20" X="831" Y="527" width="150" height="152">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="fulfillmentpr_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr#wsdl.interface(FulfillmentPr)" callbackInterface="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr#wsdl.interface(FulfillmentPrCallback)"/>
         <dgm:outputPort name="InternalStore" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/Application1/InStore/ManageInventory#wsdl.interface(ManageInventory)" callbackInterface="http://xmlns.oracle.com/Application1/InStore/ManageInventory#wsdl.interface(ManageInventoryCallback)"/>
         <dgm:outputPort name="OnlineStore" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock#wsdl.interface(ManageStock)" callbackInterface="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock#wsdl.interface(ManageStockCallback)"/>
         <dgm:outputPort name="OrdersService" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="/orderssdo/common/#wsdl.interface(OrdersService)"/>
+        <dgm:outputPort name="CustomerService" X="120" Y="90" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gWireLink source="ReceivePO" target="RoutePO/RoutePO" width="2">
-        <dgm:gSegment X1="168" Y1="213" X2="289" Y2="213"/>
+        <dgm:gSegment X1="168" Y1="252" X2="289" Y2="252"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="RoutePO/EnrichPO.EnrichPO" target="EnrichPO/EnrichPO" width="2">
-        <dgm:gSegment X1="439" Y1="213" X2="560" Y2="213"/>
+        <dgm:gSegment X1="439" Y1="252" X2="560" Y2="252"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="EnrichPO/WritePOFileService" target="WritePOFileService" width="2">
-        <dgm:gSegment X1="710" Y1="213" X2="734" Y2="213"/>
-        <dgm:gSegment X1="734" Y1="213" X2="734" Y2="36"/>
+        <dgm:gSegment X1="710" Y1="252" X2="734" Y2="252"/>
+        <dgm:gSegment X1="734" Y1="252" X2="734" Y2="36"/>
         <dgm:gSegment X1="734" Y1="36" X2="1102" Y2="36"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="EnrichPO/ApproveCCOrder.approveccorder_client" target="ApproveCCOrder/approveccorder_client" width="2">
-        <dgm:gSegment X1="710" Y1="238" X2="749" Y2="238"/>
-        <dgm:gSegment X1="749" Y1="238" X2="749" Y2="175"/>
+        <dgm:gSegment X1="710" Y1="277" X2="749" Y2="277"/>
+        <dgm:gSegment X1="749" Y1="277" X2="749" Y2="175"/>
         <dgm:gSegment X1="749" Y1="175" X2="831" Y2="175"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
@@ -190,15 +220,15 @@
         <dgm:gSegment X1="981" Y1="175" X2="1005" Y2="175"/>
         <dgm:gSegment X1="1005" Y1="175" X2="1005" Y2="122"/>
         <dgm:gSegment X1="1005" Y1="122" X2="764" Y2="122"/>
-        <dgm:gSegment X1="764" Y1="122" X2="764" Y2="479"/>
-        <dgm:gSegment X1="764" Y1="479" X2="831" Y2="479"/>
+        <dgm:gSegment X1="764" Y1="122" X2="764" Y2="559"/>
+        <dgm:gSegment X1="764" Y1="559" X2="831" Y2="559"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="EnrichPO/FulfillmentPr.fulfillmentpr_client" target="FulfillmentPr/fulfillmentpr_client" width="2">
-        <dgm:gSegment X1="710" Y1="263" X2="734" Y2="263"/>
-        <dgm:gSegment X1="734" Y1="263" X2="734" Y2="479"/>
-        <dgm:gSegment X1="734" Y1="479" X2="831" Y2="479"/>
+        <dgm:gSegment X1="710" Y1="302" X2="734" Y2="302"/>
+        <dgm:gSegment X1="734" Y1="302" X2="734" Y2="559"/>
+        <dgm:gSegment X1="734" Y1="559" X2="831" Y2="559"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
@@ -210,23 +240,30 @@
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FulfillmentPr/InternalStore" target="InternalStore" width="2">
-        <dgm:gSegment X1="981" Y1="479" X2="1005" Y2="479"/>
-        <dgm:gSegment X1="1005" Y1="479" X2="1005" Y2="297"/>
+        <dgm:gSegment X1="981" Y1="559" X2="1005" Y2="559"/>
+        <dgm:gSegment X1="1005" Y1="559" X2="1005" Y2="297"/>
         <dgm:gSegment X1="1005" Y1="297" X2="1102" Y2="297"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FulfillmentPr/OnlineStore" target="OnlineStore" width="2">
-        <dgm:gSegment X1="981" Y1="504" X2="1020" Y2="504"/>
-        <dgm:gSegment X1="1020" Y1="504" X2="1020" Y2="451"/>
+        <dgm:gSegment X1="981" Y1="584" X2="1020" Y2="584"/>
+        <dgm:gSegment X1="1020" Y1="584" X2="1020" Y2="451"/>
         <dgm:gSegment X1="1020" Y1="451" X2="1102" Y2="451"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FulfillmentPr/OrdersService" target="OrdersService" width="2">
-        <dgm:gSegment X1="981" Y1="529" X2="1005" Y2="529"/>
-        <dgm:gSegment X1="1005" Y1="529" X2="1005" Y2="605"/>
+        <dgm:gSegment X1="981" Y1="609" X2="1005" Y2="609"/>
+        <dgm:gSegment X1="1005" Y1="609" X2="1005" Y2="605"/>
         <dgm:gSegment X1="1005" Y1="605" X2="1102" Y2="605"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="FulfillmentPr/CustomerService" target="CustomerService" width="2">
+        <dgm:gSegment X1="981" Y1="634" X2="1005" Y2="634"/>
+        <dgm:gSegment X1="1005" Y1="634" X2="1005" Y2="807"/>
+        <dgm:gSegment X1="1005" Y1="807" X2="1102" Y2="807"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>

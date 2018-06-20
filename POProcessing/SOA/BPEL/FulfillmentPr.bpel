@@ -31,7 +31,9 @@
          xmlns:ns3="http://xmlns.oracle.com/Application1/InStore/ManageInventory"
          xmlns:ns4="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock"
          xmlns:ns5="http://www.example.org/ns/store" xmlns:ns6="/orderssdo/common/"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns7="/customersdo/common/">
+    <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
+            importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="/orderssdo/common/types/"
             location="http://localhost:8001/OrdersSDO/OrdersService?XSD=/orderssdo/common/serviceinterface/OrdersService.xsd"
             importType="http://www.w3.org/2001/XMLSchema"/>
@@ -56,6 +58,7 @@
         <partnerLink name="OnlineStore" partnerLinkType="ns4:ManageStock" myRole="ManageStockRequester"
                      partnerRole="ManageStockProvider"/>
         <partnerLink name="OrdersService" partnerLinkType="ns6:OrdersService" partnerRole="OrdersService"/>
+        <partnerLink name="CustomerService" partnerLinkType="ns7:CustomerService" partnerRole="CustomerSDOService"/>
     </partnerLinks>
 
     <!-- 
@@ -72,6 +75,7 @@
         <variable name="outputVariable" messageType="client:FulfillmentPrResponseMessage"/>
         <variable name="orderData" element="ns6:ordersViewSDO"/>
         <variable name="ordersEV" element="ns6:ordersViewSDO" bpelx:entity.si="OrdersService"/>
+        <variable name="customerEV" element="ns7:customersViewSDO" bpelx:entity.si="CustomerService"/>
     </variables>
 
     <!-- 
