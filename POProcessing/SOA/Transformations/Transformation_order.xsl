@@ -16,7 +16,8 @@
                 xmlns:ns2="/orderssdo/common/types/" xmlns:ns1="http://www.example.org/ns/intorder"
                 xmlns:ns4="commonj.sdo" xmlns:ns3="/customersdo/common/types/"
                 xmlns:client="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr"
-                xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns7="http://xmlns.oracle.com/adf/svc/errors/">
+                xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns7="http://xmlns.oracle.com/adf/svc/errors/"
+                xmlns:ns9="/customersdo/common/">
   <oracle-xsl-mapper:schema>
     <!--SPECIFICATION OF MAP SOURCES AND TARGETS, DO NOT MODIFY.-->
     <oracle-xsl-mapper:mapSources>
@@ -48,7 +49,7 @@
       <tns:DateOrdered>
         <xsl:value-of select="xp20:current-dateTime ( )"/>
       </tns:DateOrdered>
-      <tns:DateShipped>' ''</tns:DateShipped>
+      <tns:DateShipped/>
       <tns:Status>
         <xsl:value-of select="/ns0:FulFillmentRequest/ns1:status"/>
       </tns:Status>

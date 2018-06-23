@@ -211,11 +211,6 @@
                             </assign>
                         </otherwise>
                     </switch>
-                    <invoke name="callbackClient"
-                            partnerLink="managestock_client"
-                            portType="client:ManageStockCallback"
-                            operation="checkStockResponse"
-                            inputVariable="outputVariable"/>
                 </sequence>
             </case>
             <otherwise>
@@ -227,13 +222,10 @@
                                 query="/ns2:StoreResponse/ns2:status"/>
                         </copy>
                     </assign>
-                    <invoke name="callbackClient_fulfilled"
-                            inputVariable="outputVariable"
-                            partnerLink="managestock_client"
-                            portType="client:ManageStockCallback"
-                            operation="acquireStockResponse"/>
                 </sequence>
             </otherwise>
         </switch>
+        <invoke name="callbackClient" partnerLink="managestock_client" portType="client:ManageStockCallback"
+                operation="checkStockResponse" inputVariable="outputVariable"/>
     </sequence>
 </process>

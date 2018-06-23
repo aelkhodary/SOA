@@ -34,9 +34,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns7="/customersdo/common/">
     <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
             importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="/orderssdo/common/types/"
-            location="http://localhost:8001/OrdersSDO/OrdersService?XSD=/orderssdo/common/serviceinterface/OrdersService.xsd"
-            importType="http://www.w3.org/2001/XMLSchema"/>
+   
     <import namespace="http://www.example.org/ns/fulfillment" location="../Schemas/fulfillment.xsd"
             importType="http://www.w3.org/2001/XMLSchema"/>
     <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr" location="../WSDLs/FulfillmentPr.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
@@ -245,6 +243,11 @@
                 </if>
             </sequence>
         </scope>
+        <extensionActivity>
+            <bpelx:bindEntity name="BindEntity__customer" variable="customerEV">
+                <bpelx:key keyname="ns7:CustId">$inputVariable.payload/ns2:customerId</bpelx:key>
+            </bpelx:bindEntity>
+        </extensionActivity>
         <if name="If_orderstatus">
             <documentation>
                 <![CDATA[order completed?]]>
@@ -253,6 +256,7 @@
             <scope name="Scope_shiporder">
                 <variables>
                     <variable name="shippingRequest" element="ns1:ShippingRequest"/>
+                    <variable name="addressEV" element="ns7:addressViewSDO" bpelx:entity.si="CustomerService"/>
                 </variables>
                 <sequence name="Sequence1">
                     <assign name="Assign_shiporder">
@@ -277,6 +281,37 @@
                         <copy>
                             <from>xp20:current-dateTime()</from>
                             <to>$ordersEV/ns6:DateShipped</to>
+                        </copy>
+                    </assign>
+                    <extensionActivity>
+                        <bpelx:bindEntity name="BindEntity_address" variable="addressEV">
+                            <bpelx:key keyname="ns7:AddrId">$inputVariable.payload/ns2:customerId</bpelx:key>
+                        </bpelx:bindEntity>
+                    </extensionActivity>
+                    <assign name="Assign_shipaddress">
+                        <copy>
+                            <from>concat($customerEV/ns7:FirstName,$customerEV/ns7:LastName)</from>
+                            <to>$shippingRequest/ns1:custName</to>
+                        </copy>
+                        <copy>
+                            <from>$customerEV/ns7:AddressView/ns7:City</from>
+                            <to>$shippingRequest/ns1:shippingAddress/ns1:city</to>
+                        </copy>
+                        <copy>
+                            <from>$customerEV/ns7:AddressView/ns7:Street</from>
+                            <to>$shippingRequest/ns1:shippingAddress/ns1:street</to>
+                        </copy>
+                        <copy>
+                            <from>$customerEV/ns7:AddressView/ns7:State</from>
+                            <to>$shippingRequest/ns1:shippingAddress/ns1:state</to>
+                        </copy>
+                        <copy>
+                            <from>$customerEV/ns7:AddressView/ns7:Zip</from>
+                            <to>$shippingRequest/ns1:shippingAddress/ns1:zip</to>
+                        </copy>
+                        <copy>
+                            <from>$customerEV/ns7:AddressView/ns7:Country</from>
+                            <to>$shippingRequest/ns1:shippingAddress/ns1:country</to>
                         </copy>
                     </assign>
                     <if name="If_shiporder">
