@@ -4,11 +4,13 @@
    <annotationfile/>
    <iconize/>
    <partnerlink_locations>
-      <partnerlink name="approveccorder_client" x="0" y="663" side="left"/>
+      <partnerlink name="approveccorder_client" x="0" y="968" side="left"/>
       <partnerlink name="ValidateCCService" x="0" y="424" side="left"/>
-      <partnerlink name="FulfillmentPr.fulfillmentpr_client" x="1180" y="837" side="right"/>
+      <partnerlink name="CustomerService" x="0" y="164" side="left"/>
+      <partnerlink name="ManualApproval.TaskService" x="0" y="18" side="left"/>
+      <partnerlink name="FulfillmentPr.fulfillmentpr_client" x="1915" y="1443" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,900,1264,359" show_swimlanes="true">
+   <graph_layout viewport="0,790,1510,778" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope" type="scope" showhandlers="true"/>
@@ -17,8 +19,15 @@
       <layout_item collapsed="false" xpath="/process/sequence/scope/faultHandlers/catchAll" type="catchall"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope/faultHandlers/catchAll/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope/sequence" type="sequence"/>
-      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/scope" type="scope" showhandlers="true"/>
-      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/scope/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence" type="sequence"/>
+      <layout_item collapsed="true" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence/scope" type="human task" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence/scope/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence/if/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence/if/elseif/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/if/sequence/if/else/sequence" type="sequence"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/scope" type="scope" showhandlers="true"/>
+      <layout_item collapsed="false" xpath="/process/sequence/scope/sequence/if/sequence/scope/sequence" type="sequence"/>
    </graph_layout>
    <bookmarks/>
 </graphics>

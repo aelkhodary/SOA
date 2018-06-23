@@ -30,7 +30,10 @@
          xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
          xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap"
          xmlns:ns3="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard"
-         xmlns:ns4="http://www.example.org/ns/ccauthorize" xmlns:ns5="http://www.example.org/ns/fulfillment">
+         xmlns:ns4="http://www.example.org/ns/ccauthorize" xmlns:ns5="http://www.example.org/ns/fulfillment"
+         xmlns:ns6="http://xmlns.oracle.com/bpel/workflow/taskService" xmlns:ns7="/customersdo/common/"
+         xmlns:task="http://xmlns.oracle.com/bpel/workflow/task"
+         xmlns:wfcommon="http://xmlns.oracle.com/bpel/workflow/common">
 
     <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/POApplication/POProcessing/ApproveCCOrder" location="../WSDLs/ApproveCCOrder.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <!-- 
@@ -49,6 +52,9 @@
         <partnerLink name="FulfillmentPr.fulfillmentpr_client" partnerLinkType="ns1:FulfillmentPr"
                      partnerRole="FulfillmentPrProvider" myRole="FulfillmentPrRequester"/>
         <partnerLink name="ValidateCCService" partnerLinkType="ns3:ValidateCCService" partnerRole="validateCC_ptt"/>
+        <partnerLink name="ManualApproval.TaskService" partnerLinkType="ns6:TaskService" partnerRole="TaskService"
+                     myRole="TaskServiceCallbackListener"/>
+        <partnerLink name="CustomerService" partnerLinkType="ns7:CustomerService" partnerRole="CustomerSDOService"/>
     </partnerLinks>
 
     <!-- 
@@ -63,6 +69,7 @@
 
         <!-- Reference to the message that will be sent back to the requester during callback -->
         <variable name="outputVariable" messageType="client:ApproveCCOrderResponseMessage"/>
+        <variable name="ManualApproval1_globalVariable" messageType="ns6:taskMessage"/>
     </variables>
 
     <!-- 
@@ -128,35 +135,128 @@
                         <![CDATA[Valid]]>
                     </documentation>
                     <condition>$Invoke_validatecc_validateCC_OutputVariable.response/ns4:status = 'VALID'</condition>
-                    <scope name="Scope_fullfilment">
-                        <variables>
-                            <variable name="fulfillmentRequest" messageType="ns1:FulfillmentPrRequestMessage"/>
-                            <variable name="fulfillmentResponse" messageType="ns1:FulfillmentPrResponseMessage"/>
-                        </variables>
-                        <sequence name="Sequence2">
-                            <assign name="Transformation_fulfillment">
-                                <bpelx:annotation>
-                                    <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
-                                </bpelx:annotation>
-                                <copy>
-                                    <from>ora:doXSLTransformForDoc("../Transformations/Transformation_to_fulfillment.xsl", $outputVariable.payload)</from>
-                                    <to variable="fulfillmentRequest" part="payload"/>
-                                </copy>
-                            </assign>
-                            <invoke name="Invoke_fulfillment"
-                                    partnerLink="FulfillmentPr.fulfillmentpr_client" portType="ns1:FulfillmentPr"
-                                    operation="process" inputVariable="fulfillmentRequest" bpelx:invokeAsDetail="no"/>
-                            <receive name="Receive_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
-                                     portType="ns1:FulfillmentPrCallback" operation="processResponse"
-                                     variable="fulfillmentResponse"/>
-                            <assign name="Assign_fulfillment_status">
-                                <copy>
-                                    <from>$fulfillmentResponse.payload/ns5:shipStatus</from>
-                                    <to>$outputVariable.payload/ns2:status</to>
-                                </copy>
-                            </assign>
-                        </sequence>
-                    </scope>
+                    <sequence name="Sequence5">
+                        <if name="If_checkapproval">
+                            <documentation>
+                                <![CDATA[Approval Required]]>
+                            </documentation>
+                            <condition>$inputVariable.payload/ns2:orderTotal &gt;5000</condition>
+                            <sequence>
+                                <scope name="ManualApproval2"
+                                       xmlns:wf="http://schemas.oracle.com/bpel/extensions/workflow"
+                                       wf:key="ManualApproval1_globalVariable">
+                                    <bpelx:annotation>
+                                        <bpelx:pattern patternName="bpelx:workflow"></bpelx:pattern>
+                                    </bpelx:annotation>
+                                    <variables>
+                                        <variable name="initiateTaskInput" messageType="ns6:initiateTaskMessage"/>
+                                        <variable name="initiateTaskResponseMessage"
+                                                  messageType="ns6:initiateTaskResponseMessage"/>
+                                    </variables>
+                                    <sequence>
+                                        <assign name="ManualApproval2_AssignTaskAttributes">
+                                            <copy>
+                                                <from>number(3)</from>
+                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:priority</query></to>
+                                            </copy>
+                                            <copy>
+                                                <from>number(3)</from>
+                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:priority</query></to>
+                                            </copy>
+                                            <copy>
+                                                <from><literal><payload xmlns="http://xmlns.oracle.com/bpel/workflow/task">
+	<order xmlns="http://www.example.org/ns/intorder"/> 
+</payload></literal></from>
+                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:payload</query></to>
+                                            </copy>
+                                            <copy>
+                                                <from variable="outputVariable" part="payload"/>
+                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:payload/ns2:order</query></to>
+                                            </copy>
+                                        </assign>
+                                        <invoke name="initiateTask_ManualApproval2"
+                                                partnerLink="ManualApproval.TaskService" operation="initiateTask"
+                                                portType="ns6:TaskService" inputVariable="initiateTaskInput"
+                                                outputVariable="initiateTaskResponseMessage"/>
+                                        <receive name="receiveCompletedTask_ManualApproval2"
+                                                 partnerLink="ManualApproval.TaskService"
+                                                 portType="ns6:TaskServiceCallback" operation="onTaskCompleted"
+                                                 variable="ManualApproval1_globalVariable" createInstance="no"/>
+                                    </sequence>
+                                </scope>
+                                <if name="taskIf">
+                                    <documentation>
+                                        <![CDATA[Task outcome is APPROVE]]>
+                                    </documentation>
+                                    <condition>$ManualApproval1_globalVariable.payload/task:systemAttributes/task:outcome = 'APPROVE'</condition>
+                                    <sequence>
+                                        <assign name="CopyPayloadFromTask">
+                                            <copy>
+                                                <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
+                                                <to variable="outputVariable" part="payload"/>
+                                            </copy>
+                                        </assign>
+                                    </sequence>
+                                    <elseif>
+                                        <documentation>
+                                            <![CDATA[Task outcome is REJECT]]>
+                                        </documentation>
+                                        <condition>$ManualApproval1_globalVariable.payload/task:systemAttributes/task:outcome = 'REJECT'</condition>
+                                        <sequence>
+                                            <assign name="CopyPayloadFromTask">
+                                                <copy>
+                                                    <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
+                                                    <to variable="outputVariable" part="payload"/>
+                                                </copy>
+                                            </assign>
+                                        </sequence>
+                                    </elseif>
+                                    <else>
+                                        <sequence>
+                                            <assign name="CopyPayloadFromTask">
+                                                <copy>
+                                                    <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
+                                                    <to variable="outputVariable" part="payload"/>
+                                                </copy>
+                                            </assign>
+                                        </sequence>
+                                    </else>
+                                </if>
+                            </sequence>
+                            <else>
+                                <assign name="Assign_autoapproved"></assign>
+                            </else>
+                        </if>
+                        <scope name="Scope_fullfilment">
+                            <variables>
+                                <variable name="fulfillmentRequest" messageType="ns1:FulfillmentPrRequestMessage"/>
+                                <variable name="fulfillmentResponse" messageType="ns1:FulfillmentPrResponseMessage"/>
+                            </variables>
+                            <sequence name="Sequence2">
+                                <assign name="Transformation_fulfillment">
+                                    <bpelx:annotation>
+                                        <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                                    </bpelx:annotation>
+                                    <copy>
+                                        <from>ora:doXSLTransformForDoc("../Transformations/Transformation_to_fulfillment.xsl", $outputVariable.payload)</from>
+                                        <to variable="fulfillmentRequest" part="payload"/>
+                                    </copy>
+                                </assign>
+                                <invoke name="Invoke_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
+                                        portType="ns1:FulfillmentPr" operation="process"
+                                        inputVariable="fulfillmentRequest" bpelx:invokeAsDetail="no"/>
+                                <receive name="Receive_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
+                                         portType="ns1:FulfillmentPrCallback" operation="processResponse"
+                                         variable="fulfillmentResponse"/>
+                                <assign name="Assign_fulfillment_status">
+                                    <copy>
+                                        <from>$fulfillmentResponse.payload/ns5:shipStatus</from>
+                                        <to>$outputVariable.payload/ns2:status</to>
+                                    </copy>
+                                </assign>
+                            </sequence>
+                        </scope>
+                    </sequence>
                     <else>
                         <documentation>
                             <![CDATA[Invalid]]>

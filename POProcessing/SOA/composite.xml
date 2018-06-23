@@ -38,6 +38,9 @@
   <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
           importType="wsdl"/>
   <import namespace="/customersdo/common/" location="WSDLs/CustomerSDOServiceWrapper.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/bpel/workflow/taskService"
+          location="oramds:/soa/shared/workflow/TaskServiceInterface.wsdl" importType="wsdl"/>
+  <import namespace="/customersdo/common/" location="WSDLs/CustomerSDOServiceWrapper1.wsdl" importType="wsdl"/>
   <service name="ReceivePO" ui:wsdlLocation="WSDLs/ReceivePO.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.endpoint(ReceivePO/execute_pt)">
@@ -88,6 +91,14 @@
       <reference name="ValidateCCService" ui:wsdlLocation="WSDLs/ValidateCreditCardWrapper.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard#wsdl.interface(validateCC_ptt)"/>
       </reference>
+      <reference name="ManualApproval.TaskService"
+                 ui:wsdlLocation="oramds:/soa/shared/workflow/TaskServiceInterface.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)"
+                        callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+      </reference>
+      <reference name="CustomerService" ui:wsdlLocation="WSDLs/CustomerSDOServiceWrapper1.wsdl">
+        <interface.wsdl interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
+      </reference>
     </componentType>
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string" many="false">async.persist</property>
   </component>
@@ -117,6 +128,15 @@
       </reference>
     </componentType>
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string" many="false">async.persist</property>
+  </component>
+  <component name="ManualApproval">
+    <implementation.workflow src="HumanTasks/ManualApproval.task"/>
+    <componentType>
+      <service name="TaskService" ui:wsdlLocation="oramds:/soa/shared/workflow/TaskServiceInterface.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)"
+                        callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+      </service>
+    </componentType>
   </component>
   <reference name="WritePOFileService" ui:wsdlLocation="WSDLs/WritePOFileService.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/POApplication/POProcessing/WritePOFileService#wsdl.interface(Write_ptt)"/>
@@ -210,6 +230,14 @@
   </wire>
   <wire>
     <source.uri>FulfillmentPr/CustomerService</source.uri>
+    <target.uri>CustomerService</target.uri>
+  </wire>
+  <wire>
+    <source.uri>ApproveCCOrder/ManualApproval.TaskService</source.uri>
+    <target.uri>ManualApproval/TaskService</target.uri>
+  </wire>
+  <wire>
+    <source.uri>ApproveCCOrder/CustomerService</source.uri>
     <target.uri>CustomerService</target.uri>
   </wire>
 </composite>
