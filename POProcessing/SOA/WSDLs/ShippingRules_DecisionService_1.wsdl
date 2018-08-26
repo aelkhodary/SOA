@@ -8,6 +8,7 @@
      xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
      xmlns:java="http://schemas.xmlsoap.org/wsdl/java/"
      xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
      xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
     >
     <wsdl:types>

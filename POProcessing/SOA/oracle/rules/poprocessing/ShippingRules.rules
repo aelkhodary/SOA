@@ -1162,7 +1162,7 @@
       <Alias>DecisionService_1</Alias>
       <Visible>true</Visible>
       <CreationUpdateNumber>3</CreationUpdateNumber>
-      <WebService>true</WebService>
+      <WebService>false</WebService>
       <CheckRuleFlow>true</CheckRuleFlow>
       <Stateless>true</Stateless>
       <DecisionFunctionInput id="G}-33e5e527:16577dfa875:-7c06">
@@ -1194,7 +1194,44 @@
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>7</UpdateNumber>
+    <DecisionFunction id="G}624f62e0:165780ca52c:-7c2f">
+      <Name>DecisionService_1</Name>
+      <Alias>DecisionService_1</Alias>
+      <Visible>true</Visible>
+      <CreationUpdateNumber>9</CreationUpdateNumber>
+      <WebService>true</WebService>
+      <CheckRuleFlow>true</CheckRuleFlow>
+      <Stateless>true</Stateless>
+      <DecisionFunctionInput id="G}624f62e0:165780ca52c:-7c2e">
+        <Name>shippinginfo</Name>
+        <Alias>shippinginfo</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>11</CreationUpdateNumber>
+        <IDofType>J}org.example.ns.shippingrules.Shippinginfo</IDofType>
+        <List>false</List>
+        <Tree>true</Tree>
+      </DecisionFunctionInput>
+      <DecisionFunctionRuleSet id="L}129">
+        <CreationUpdateNumber>10</CreationUpdateNumber>
+        <Form>rule set</Form>
+        <Ruleset>Ruleset1</Ruleset>
+        <refID>G}-33e5e527:16577dfa875:-7c08</refID>
+      </DecisionFunctionRuleSet>
+      <DecisionFunctionOutput id="G}624f62e0:165780ca52c:-7c2d">
+        <Name>shippingcompany</Name>
+        <Alias>shippingcompany</Alias>
+        <Visible>true</Visible>
+        <CreationUpdateNumber>12</CreationUpdateNumber>
+        <IDofType>J}org.example.ns.shippingrules.Shippingcompany</IDofType>
+        <List>false</List>
+        <Tree>false</Tree>
+      </DecisionFunctionOutput>
+      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <RuleFiringLimit>10000</RuleFiringLimit>
+      <RuleFiringLimitError>true</RuleFiringLimitError>
+      <UniqueRulesets>false</UniqueRulesets>
+    </DecisionFunction>
+    <UpdateNumber>13</UpdateNumber>
     <ValidationUpdateNumber>-1</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
@@ -1208,7 +1245,7 @@
     <CreationUpdateNumber>3</CreationUpdateNumber>
   </RuleSet>
   <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>7</UpdateNumber>
+  <UpdateNumber>13</UpdateNumber>
   <ResourceBundle>ShippingRulesTranslations</ResourceBundle>
   <TestModel id="L}3">
     <ValidationUpdateNumber>1</ValidationUpdateNumber>
