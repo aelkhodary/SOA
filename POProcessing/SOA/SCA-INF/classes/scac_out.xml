@@ -108,7 +108,7 @@
       <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</file>
       <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</name>
       <fix/>
-      <msg>Error in getting XML input stream: http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd: Permission denied: connect</msg>
+      <msg>Error in getting XML input stream: http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd: Connection refused: connect</msg>
    </Fault>
    <Fault>
       <severity>error</severity>
@@ -1015,6 +1015,156 @@
       <loc/>
       <line/>
       <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateless</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatelessDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateful</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatefulDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}errorInfo</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateless</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatelessDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateful</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatefulDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}errorInfo</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateless</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatelessDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStateful</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}callFunctionStatefulDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApprovalRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1}errorInfo</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
       <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</file>
       <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</name>
       <fix/>
@@ -1033,7 +1183,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>189</line>
+      <line>205</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1043,7 +1193,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>189</line>
+      <line>205</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1053,7 +1203,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>189</line>
+      <line>205</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1063,7 +1213,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>172</line>
+      <line>188</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1073,7 +1223,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>172</line>
+      <line>188</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1083,7 +1233,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>172</line>
+      <line>188</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1093,7 +1243,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>182</line>
+      <line>198</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1103,7 +1253,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>182</line>
+      <line>198</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1113,7 +1263,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>182</line>
+      <line>198</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1123,7 +1273,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>161</line>
+      <line>177</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1133,7 +1283,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>161</line>
+      <line>177</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1143,7 +1293,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>161</line>
+      <line>177</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1153,7 +1303,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>152</line>
+      <line>168</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1163,7 +1313,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>152</line>
+      <line>168</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1173,7 +1323,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>152</line>
+      <line>168</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1183,7 +1333,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='EnrichPO']</loc>
-      <line>63</line>
+      <line>67</line>
       <col>30</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1193,7 +1343,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>82</line>
+      <line>86</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1203,7 +1353,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>82</line>
+      <line>86</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1213,7 +1363,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>82</line>
+      <line>86</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1223,7 +1373,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>110</line>
+      <line>118</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1233,7 +1383,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>110</line>
+      <line>118</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1243,7 +1393,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>110</line>
+      <line>118</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1253,7 +1403,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>110</line>
+      <line>118</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1263,7 +1413,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>110</line>
+      <line>118</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1273,17 +1423,17 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>41</line>
+      <line>42</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
       <fix>Please check import location or element QNames.</fix>
-      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect</msg>
+      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.ConnectException.: java.net.ConnectException: Connection refused: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.ConnectException.: java.net.ConnectException: Connection refused: connect</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>44</line>
+      <line>45</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1293,7 +1443,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>45</line>
+      <line>46</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1303,7 +1453,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>58</line>
+      <line>59</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1313,7 +1463,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>60</line>
+      <line>61</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1323,7 +1473,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>61</line>
+      <line>62</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1333,7 +1483,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>63</line>
+      <line>64</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1343,7 +1493,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>64</line>
+      <line>65</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1353,7 +1503,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>66</line>
+      <line>67</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1363,7 +1513,17 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>77</line>
+      <line>70</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns11:ApprovalRules.ApprovalRules_DecisionService_1" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns11:ApprovalRules.ApprovalRules_DecisionService_1" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>81</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1373,7 +1533,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>80</line>
+      <line>84</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1383,7 +1543,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>81</line>
+      <line>85</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1393,7 +1553,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>82</line>
+      <line>86</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1403,7 +1563,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>94</line>
+      <line>98</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1413,7 +1573,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>94</line>
+      <line>98</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1423,7 +1583,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>94</line>
+      <line>98</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1433,7 +1593,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>96</line>
+      <line>100</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1443,7 +1603,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>103</line>
+      <line>107</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1453,7 +1613,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>104</line>
+      <line>108</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1463,22 +1623,12 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>107</line>
+      <line>111</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
       <fix>Make sure that value "ns4:CreditCheckFault" is resolvable (check imports, value of "faultElement").</fix>
       <msg>"faultElement" is set to "ns4:CreditCheckFault" on this &lt;bpel:catch> activity but it cannot be resolved (check value of "faultElement", imports, WSDLs or XSDs).</msg>
-   </Fault>
-   <Fault>
-      <severity>warning</severity>
-      <loc/>
-      <line>130</line>
-      <col/>
-      <file>BPEL/ApproveCCOrder.bpel</file>
-      <name>BPEL/ApproveCCOrder.bpel</name>
-      <fix>Types must be compatible.</fix>
-      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
@@ -1493,7 +1643,17 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>142</line>
+      <line>138</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>146</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1503,7 +1663,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>142</line>
+      <line>146</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1513,7 +1673,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>142</line>
+      <line>146</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1523,7 +1683,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>142</line>
+      <line>146</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1533,7 +1693,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>167</line>
+      <line>171</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1543,7 +1703,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>169</line>
+      <line>173</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1553,7 +1713,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>183</line>
+      <line>187</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1563,7 +1723,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>191</line>
+      <line>195</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1573,7 +1733,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>191</line>
+      <line>195</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1583,7 +1743,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>191</line>
+      <line>195</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1593,7 +1753,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>191</line>
+      <line>195</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1603,7 +1763,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>195</line>
+      <line>199</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1613,7 +1773,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>195</line>
+      <line>199</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1623,7 +1783,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>195</line>
+      <line>199</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1633,7 +1793,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>205</line>
+      <line>209</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1643,7 +1803,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>224</line>
+      <line>228</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1653,7 +1813,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>255</line>
+      <line>259</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1663,7 +1823,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>257</line>
+      <line>261</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1673,7 +1833,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>266</line>
+      <line>270</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1683,7 +1843,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>271</line>
+      <line>275</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1693,7 +1853,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>271</line>
+      <line>275</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1703,7 +1863,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>271</line>
+      <line>275</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1713,7 +1873,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>274</line>
+      <line>278</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1723,7 +1883,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>274</line>
+      <line>278</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1733,7 +1893,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>274</line>
+      <line>278</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1743,7 +1903,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>276</line>
+      <line>280</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1753,7 +1913,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>302</line>
+      <line>306</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1763,7 +1923,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>302</line>
+      <line>306</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1773,7 +1933,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>302</line>
+      <line>306</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1783,7 +1943,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>305</line>
+      <line>309</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1793,7 +1953,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>318</line>
+      <line>322</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1803,7 +1963,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>319</line>
+      <line>323</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1813,7 +1973,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>321</line>
+      <line>325</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1823,7 +1983,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>327</line>
+      <line>331</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1833,7 +1993,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>327</line>
+      <line>331</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1843,7 +2003,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>327</line>
+      <line>331</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1853,7 +2013,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>331</line>
+      <line>335</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1863,7 +2023,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>331</line>
+      <line>335</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1873,7 +2033,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>331</line>
+      <line>335</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1883,7 +2043,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>335</line>
+      <line>339</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1893,7 +2053,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>335</line>
+      <line>339</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1903,7 +2063,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>335</line>
+      <line>339</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1913,7 +2073,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>339</line>
+      <line>343</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1923,7 +2083,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>339</line>
+      <line>343</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1933,7 +2093,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>339</line>
+      <line>343</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1941,19 +2101,9 @@
       <msg>The XPath segment "child::ns10:ReplyToAddress" cannot be resolved.</msg>
    </Fault>
    <Fault>
-      <severity>error</severity>
-      <loc/>
-      <line>342</line>
-      <col/>
-      <file>BPEL/ApproveCCOrder.bpel</file>
-      <name>BPEL/ApproveCCOrder.bpel</name>
-      <fix>Check expression syntax on &lt;bpel:from>.</fix>
-      <msg>The expression "concat($outputVariable.payload/ns2:status, 'Your ..." has invalid syntax - Unexpected '%$outputVariable.payload/ns2:status, string('%>'), Your order status:, &lt;%'Your order status: ' &lt;%$outputVariable.payload/ns2:status, string('%>%>'), $customerEV/ns7:Status)'</msg>
-   </Fault>
-   <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>343</line>
+      <line>347</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1963,7 +2113,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>343</line>
+      <line>347</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1973,7 +2123,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>343</line>
+      <line>347</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -1981,19 +2131,9 @@
       <msg>The XPath segment "child::ns10:Subject" cannot be resolved.</msg>
    </Fault>
    <Fault>
-      <severity>error</severity>
-      <loc/>
-      <line>346</line>
-      <col/>
-      <file>BPEL/ApproveCCOrder.bpel</file>
-      <name>BPEL/ApproveCCOrder.bpel</name>
-      <fix>Check expression syntax on &lt;bpel:from>.</fix>
-      <msg>The expression "concat($customerEV/ns7:Email, concat('Your order ..." has invalid syntax - Unexpected '&lt;'</msg>
-   </Fault>
-   <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>347</line>
+      <line>351</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2003,7 +2143,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>347</line>
+      <line>351</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2013,7 +2153,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>347</line>
+      <line>351</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2021,19 +2161,9 @@
       <msg>The XPath segment "child::ns10:To" cannot be resolved.</msg>
    </Fault>
    <Fault>
-      <severity>error</severity>
-      <loc/>
-      <line>350</line>
-      <col/>
-      <file>BPEL/ApproveCCOrder.bpel</file>
-      <name>BPEL/ApproveCCOrder.bpel</name>
-      <fix>Check expression syntax on &lt;bpel:from>.</fix>
-      <msg>The expression "&lt;p>Dear $customerEV/ns7:FirstName,&lt;/p> &lt;p>The st ..." has invalid syntax - Unexpected '&lt;'</msg>
-   </Fault>
-   <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>351</line>
+      <line>355</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2043,7 +2173,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>351</line>
+      <line>355</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2053,7 +2183,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>351</line>
+      <line>355</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2063,7 +2193,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>355</line>
+      <line>359</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2073,7 +2203,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>355</line>
+      <line>359</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2083,7 +2213,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>355</line>
+      <line>359</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2093,7 +2223,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>360</line>
+      <line>364</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2103,7 +2233,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>360</line>
+      <line>364</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2113,7 +2243,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>360</line>
+      <line>364</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2123,7 +2253,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>360</line>
+      <line>364</line>
       <col/>
       <file>BPEL/ApproveCCOrder.bpel</file>
       <name>BPEL/ApproveCCOrder.bpel</name>
@@ -2158,7 +2288,7 @@
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Please check import location or element QNames.</fix>
-      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect</msg>
+      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.ConnectException.: java.net.ConnectException: Connection refused: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.ConnectException.: java.net.ConnectException: Connection refused: connect</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
@@ -2832,8 +2962,18 @@
    </Fault>
    <Fault>
       <severity>error</severity>
+      <loc>ApprovalRules</loc>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>Rule Dictionary ApprovalRules is invalid.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2843,7 +2983,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2853,7 +2993,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2863,7 +3003,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2873,7 +3013,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
-      <line>227</line>
+      <line>243</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2883,7 +3023,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
-      <line>227</line>
+      <line>243</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2893,7 +3033,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>243</line>
+      <line>259</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2903,7 +3043,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>243</line>
+      <line>259</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2913,7 +3053,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
-      <line>239</line>
+      <line>255</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2923,7 +3063,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
-      <line>239</line>
+      <line>255</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2933,7 +3073,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>235</line>
+      <line>251</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2943,7 +3083,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>235</line>
+      <line>251</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2953,7 +3093,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>235</line>
+      <line>251</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2963,7 +3103,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>235</line>
+      <line>251</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2973,7 +3113,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>231</line>
+      <line>247</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2983,7 +3123,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>231</line>
+      <line>247</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2993,7 +3133,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>231</line>
+      <line>247</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3003,7 +3143,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>231</line>
+      <line>247</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3013,7 +3153,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3023,7 +3163,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3033,7 +3173,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3043,7 +3183,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>219</line>
+      <line>235</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3053,7 +3193,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>243</line>
+      <line>259</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3063,7 +3203,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>243</line>
+      <line>259</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>

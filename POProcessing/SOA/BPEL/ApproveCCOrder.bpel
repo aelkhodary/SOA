@@ -38,7 +38,8 @@
          xmlns:ns8="http://xmlns.oracle.com/bpel/workflow/TaskEvidenceService"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ns9="http://xmlns.oracle.com/bpel/workflow/routingSlip"
-         xmlns:ns10="http://xmlns.oracle.com/ias/pcbpel/NotificationService">
+         xmlns:ns10="http://xmlns.oracle.com/ias/pcbpel/NotificationService"
+         xmlns:ns11="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1">
     <import namespace="/customersdo/common/types/"
             location="http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd"
             importType="http://www.w3.org/2001/XMLSchema"/>
@@ -64,6 +65,9 @@
         <partnerLink name="CustomerService" partnerLinkType="ns7:CustomerService" partnerRole="CustomerSDOService"/>
         <partnerLink name="NotificationService1" partnerLinkType="ns10:NotificationServiceLink"
                      partnerRole="NotificationServiceProvider"/>
+        <partnerLink name="ApprovalRules.ApprovalRules_DecisionService_1"
+                     partnerLinkType="ns11:ApprovalRules.ApprovalRules_DecisionService_1"
+                     partnerRole="IDecisionService"/>
     </partnerLinks>
 
     <!-- 

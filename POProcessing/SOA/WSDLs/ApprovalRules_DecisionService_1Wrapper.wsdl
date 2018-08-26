@@ -1,0 +1,16 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="ApprovalRules_DecisionService_1"
+     targetNamespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:tns="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="ApprovalRules.ApprovalRules_DecisionService_1">
+        <plnk:role name="IDecisionService" portType="tns:IDecisionService"/>
+    </plnk:partnerLinkType>
+    <wsdl:import namespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
+         location="ApprovalRules_DecisionService_1.wsdl"/>
+</wsdl:definitions>

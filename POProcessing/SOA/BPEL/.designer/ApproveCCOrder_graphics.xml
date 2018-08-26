@@ -8,10 +8,11 @@
       <partnerlink name="ValidateCCService" x="0" y="18" side="left"/>
       <partnerlink name="CustomerService" x="0" y="164" side="left"/>
       <partnerlink name="ManualApproval.TaskService" x="0" y="75" side="left"/>
-      <partnerlink name="FulfillmentPr.fulfillmentpr_client" x="1520" y="18" side="right"/>
-      <partnerlink name="NotificationService1" x="1520" y="75" side="right"/>
+      <partnerlink name="ApprovalRules.ApprovalRules_DecisionService_1" x="0" y="298" side="left"/>
+      <partnerlink name="FulfillmentPr.fulfillmentpr_client" x="1064" y="18" side="right"/>
+      <partnerlink name="NotificationService1" x="1064" y="75" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,0,1706,1153" show_swimlanes="true">
+   <graph_layout viewport="0,0,1250,520" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
       <layout_item collapsed="true" xpath="/process/sequence/scope[1]" type="scope" showhandlers="true"/>

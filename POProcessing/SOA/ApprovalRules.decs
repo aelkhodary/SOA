@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="ApprovalRules">
+    <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="OracleRulesSDK">
+        <repository type="SCA-Archive">
+            <path>POProcessing/oracle/rules/poprocessing/ApprovalRules.rules</path>
+        </repository>
+    </ruleEngineProvider>
+    <decisionService name="ApprovalRules_DecisionService_1" ruleEngineProviderReference="OracleRulesSDK" targetNamespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1">
+        <catalog>ApprovalRules</catalog>
+        <pattern name="CallFunctionStateless">
+            <arguments>
+                <call>poprocessing.ApprovalRules.DecisionService_1</call>
+            </arguments>
+        </pattern>
+        <pattern name="CallFunctionStateful">
+            <arguments>
+                <call>poprocessing.ApprovalRules.DecisionService_1</call>
+            </arguments>
+        </pattern>
+    </decisionService>
+    <schemaInformation>
+        <dictionary fqnPackage="poprocessing" fqnName="ApprovalRules" updateNumber="7">
+            <schemaBrowser>
+                <package>org.example.ns.approvalrules</package>
+                <namespace>http://www.example.org/ns/approvalrules</namespace>
+            </schemaBrowser>
+            <schemaImport namespace="http://www.example.org/ns/approvalrules" localPart="orderapproval.xsd" schemaLocation="Schemas/orderapproval.xsd">
+                <import namespace="http://www.example.org/ns/approvalrules" localPart="orderapproval.xsd" schemaLocation="Schemas/orderapproval.xsd"/>
+            </schemaImport>
+        </dictionary>
+    </schemaInformation>
+</decisionServices>
