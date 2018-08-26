@@ -18,7 +18,7 @@
                 xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap">
    <name>ManualApproval</name>
    <id>${domain_id}_${process_id}_${process_revision}_ManualApproval</id>
-   <title type="STATIC"><value>Manual  Approval</value></title>
+   <title type="STATIC"><value>Manual Approval</value></title>
    <priority>3</priority>
    <description>Manually approve orders</description>
    <descriptionType>STATIC</descriptionType>
@@ -69,6 +69,7 @@
       <allowInitiatorEditParticipants>false</allowInitiatorEditParticipants>
       <allowParticipantsEditParticipants>false</allowParticipantsEditParticipants>
       <globalCreationTask>false</globalCreationTask>
+      <taskFlowFileLocation>file:/D:/MyWork/POApplication/ApprovalTaskForm/public_html/WEB-INF/ManualApproval_TaskFlow.xml</taskFlowFileLocation>
       <workflowConditions/>
       <taskSequenceTypes>FUTURE</taskSequenceTypes>
       <taskSequenceTypes>AGGREGATE</taskSequenceTypes>

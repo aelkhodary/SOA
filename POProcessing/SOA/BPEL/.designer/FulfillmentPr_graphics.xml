@@ -6,11 +6,11 @@
    <partnerlink_locations>
       <partnerlink name="fulfillmentpr_client" x="4" y="858" side="left"/>
       <partnerlink name="CustomerService" x="4" y="97" side="left"/>
-      <partnerlink name="InternalStore" x="1148" y="18" side="right"/>
-      <partnerlink name="OrdersService" x="1148" y="132" side="right"/>
-      <partnerlink name="OnlineStore" x="1148" y="75" side="right"/>
+      <partnerlink name="InternalStore" x="1575" y="18" side="right"/>
+      <partnerlink name="OrdersService" x="1575" y="132" side="right"/>
+      <partnerlink name="OnlineStore" x="1575" y="75" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,51,1264,520" show_swimlanes="true">
+   <graph_layout viewport="0,0,1691,1153" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
       <layout_item collapsed="false" xpath="/process/sequence/scope[1]" type="scope" showhandlers="true"/>

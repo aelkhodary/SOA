@@ -1,6 +1,2136 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <Faults>
    <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='WSDLs/FulfillmentPr.wsdl']</loc>
+      <line>23</line>
+      <col>66</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "WSDLs/FulfillmentPr.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/soa-infra/services/default/CreditCardValidation!1.0/WSDLs/ValidateCreditCard.wsdl']</loc>
+      <line>26</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/soa-infra/services/default/CreditCardValidation!1.0/WSDLs/ValidateCreditCard.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='WSDLs/ValidateCreditCardWrapper.wsdl']</loc>
+      <line>28</line>
+      <col>78</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "WSDLs/ValidateCreditCardWrapper.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/soa-infra/services/default/InternalStore!1.0/ManageInventory.wsdl']</loc>
+      <line>31</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/soa-infra/services/default/InternalStore!1.0/ManageInventory.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/soa-infra/services/default/OnlineStore!1.0/ManageStock.wsdl']</loc>
+      <line>34</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/soa-infra/services/default/OnlineStore!1.0/ManageStock.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/OrdersSDO/OrdersService?WSDL']</loc>
+      <line>36</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/OrdersSDO/OrdersService?WSDL" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='WSDLs/OrdersServiceWrapper.wsdl']</loc>
+      <line>37</line>
+      <col>104</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "WSDLs/OrdersServiceWrapper.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL']</loc>
+      <line>39</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='WSDLs/CustomerSDOServiceWrapper.wsdl']</loc>
+      <line>40</line>
+      <col>111</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "WSDLs/CustomerSDOServiceWrapper.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='WSDLs/CustomerSDOServiceWrapper1.wsdl']</loc>
+      <line>43</line>
+      <col>112</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "WSDLs/CustomerSDOServiceWrapper1.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</name>
+      <fix/>
+      <msg>Error in getting XML input stream: http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd: Permission denied: connect</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</name>
+      <fix/>
+      <msg>Message part "part" is undefined [element = {http://www.example.org/ns/porder}PurchaseOrder</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "IMPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}IMPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "FaxPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}FaxPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "VoicePayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}VoicePayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "SMSPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}SMSPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "PagerPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}PagerPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "URIPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}URIPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "EmailPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}EmailPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "UserNotificationPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}UserNotificationPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "GroupNotificationPayload" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}GroupNotificationPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "GenericPayloads" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}GenericPayloadType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "Response" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}ResponseType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "Responses" is undefined [type = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}ArrayOfResponseType</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/NotificationService.wsdl</file>
+      <name>oramds:/soa/shared/workflow/NotificationService.wsdl</name>
+      <fix/>
+      <msg>Message part "faultInfo" is undefined [element = {http://xmlns.oracle.com/ias/pcbpel/NotificationService}faultMessage</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/task}task</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}initiateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}initiateTaskResponse</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reinitiateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reinitiateTaskResponse</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}overrideRoutingSlip</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}skipCurrentAssignment</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}mergeAndUpdateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}submitInfoForTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}getUsersToRequestInfoForTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}listOfUserIds</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}getFutureParticipants</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/routingSlip}routingSlip</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}getApprovers</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}listOfUserIds</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}escalateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}escalateTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}withdrawTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}suspendTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}resumeTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}acquireTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}releaseTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reassignTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reassignTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}renewTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateOutcomeOfTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateTaskOutcome</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateTaskOutcomeAndRoute</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}requestInfoForTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}requestInfoForTaskWithReapproval</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}routeTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}pushBackTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}delegateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}delegateTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}errorTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}addComment</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}addCommentToTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}addAttachment</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}removeAttachment</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}addDocument</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}removeDocument</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}withdrawTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}suspendTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}resumeTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}acquireTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}releaseTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}bulkOperationOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}taskUpdatedMessage</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}subTaskUpdatedMessage</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}taskAssignedMessage</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}stageCompleteMessage</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}staleObjectFault</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}operationErroredFault</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}createToDoTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}deleteTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}deleteTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}purgeTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}purgeTaskOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}purgeTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}setTaskSequenceChanges</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}setTaskSequenceChangesOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}restartRootTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}prepareForRestartRootTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reevaluateTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}reevaluateTaskOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updatePriority</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updatePriorityOfTasks</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}suspendTimers</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}resumeTimers</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}successResponseOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}decomposeTask</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateTasksByCommands</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</file>
+      <name>oramds:/soa/shared/workflow/TaskServiceInterface.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/bpel/workflow/taskService}updateTasksByCommandsOutput</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/WritePOFileService.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/WritePOFileService.wsdl</name>
+      <fix/>
+      <msg>Message part "body" is undefined [element = {http://www.example.org/ns/intorder}order</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/EnrichPO.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/EnrichPO.wsdl</name>
+      <fix/>
+      <msg>Message part "request" is undefined [element = {http://www.example.org/ns/intorder}order</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://www.example.org/ns/intorder}order</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ApproveCCOrder.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://www.example.org/ns/intorder}order</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
+      <line>189</line>
+      <col>113</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
+      <line>189</line>
+      <col>113</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "CustomerService":"{/customersdo/common/}CustomerSDOServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
+      <line>189</line>
+      <col>113</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "CustomerService":"{/customersdo/common/}CustomerSDOServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
+      <line>172</line>
+      <col>114</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock" for "OnlineStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
+      <line>172</line>
+      <col>114</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "OnlineStore":"{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
+      <line>172</line>
+      <col>114</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "OnlineStore":"{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
+      <line>182</line>
+      <col>104</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/orderssdo/common/}OrdersService" for "OrdersService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
+      <line>182</line>
+      <col>104</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "OrdersService":"{/orderssdo/common/}OrdersServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
+      <line>182</line>
+      <col>104</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "OrdersService":"{/orderssdo/common/}OrdersServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
+      <line>161</line>
+      <col>120</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory" for "InternalStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
+      <line>161</line>
+      <col>120</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "InternalStore":"{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
+      <line>161</line>
+      <col>120</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "InternalStore":"{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
+      <line>152</line>
+      <col>136</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_ptt" for "ValidateCCService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
+      <line>152</line>
+      <col>136</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "ValidateCCService":"{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
+      <line>152</line>
+      <col>136</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "ValidateCCService":"{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_pt" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='EnrichPO']</loc>
+      <line>63</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "FulfillmentPr.fulfillmentpr_client" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
+      <line>82</line>
+      <col>50</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "FulfillmentPr.fulfillmentpr_client" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
+      <line>82</line>
+      <col>50</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_ptt" for "ValidateCCService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
+      <line>82</line>
+      <col>50</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
+      <line>110</line>
+      <col>49</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "fulfillmentpr_client" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
+      <line>110</line>
+      <col>49</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory" for "InternalStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
+      <line>110</line>
+      <col>49</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock" for "OnlineStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
+      <line>110</line>
+      <col>49</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/orderssdo/common/}OrdersService" for "OrdersService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
+      <line>110</line>
+      <col>49</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>41</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Please check import location or element QNames.</fix>
+      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>44</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check location "http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd" and import type "http://www.w3.org/2001/XMLSchema"</fix>
+      <msg>Cannot import type "http://www.w3.org/2001/XMLSchema" from location "http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>45</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check location "../WSDLs/ApproveCCOrder.wsdl" and import type "http://schemas.xmlsoap.org/wsdl/"</fix>
+      <msg>Cannot import type "http://schemas.xmlsoap.org/wsdl/" from location "../WSDLs/ApproveCCOrder.wsdl"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>58</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "client:ApproveCCOrder" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "client:ApproveCCOrder" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>60</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns1:FulfillmentPr" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns1:FulfillmentPr" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>61</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns3:ValidateCCService" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns3:ValidateCCService" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>63</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:TaskService" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns6:TaskService" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>64</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns7:CustomerService" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns7:CustomerService" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>66</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns10:NotificationServiceLink" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns10:NotificationServiceLink" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>77</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "client:ApproveCCOrderRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "client:ApproveCCOrderRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>80</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "client:ApproveCCOrderResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "client:ApproveCCOrderResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>81</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:taskMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns6:taskMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>82</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:taskMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns6:taskMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>94</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>94</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "client:ApproveCCOrder" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "client:ApproveCCOrder" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>94</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>96</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>103</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns3:requestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:requestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>104</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns3:replyMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:replyMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>107</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns4:CreditCheckFault" is resolvable (check imports, value of "faultElement").</fix>
+      <msg>"faultElement" is set to "ns4:CreditCheckFault" on this &lt;bpel:catch> activity but it cannot be resolved (check value of "faultElement", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>130</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>134</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>142</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>142</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>142</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "outputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "outputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>142</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns3:validateCC_ptt" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns3:validateCC_ptt" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>167</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:initiateTaskMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns6:initiateTaskMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>169</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:initiateTaskResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns6:initiateTaskResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>183</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>191</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>191</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>191</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "outputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "outputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>191</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:TaskService" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns6:TaskService" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>195</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>195</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns6:TaskServiceCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns6:TaskServiceCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>195</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>205</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>224</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>255</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns1:FulfillmentPrRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns1:FulfillmentPrRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>257</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns1:FulfillmentPrResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns1:FulfillmentPrResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>266</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>271</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>271</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>271</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns1:FulfillmentPr" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns1:FulfillmentPr" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>274</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>274</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns1:FulfillmentPrCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns1:FulfillmentPrCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>274</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>276</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>302</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>302</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>302</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "client:ApproveCCOrderCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "client:ApproveCCOrderCallback" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>305</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns7:customersViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns7:customersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>318</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns10:EmailNotificationRequest" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns10:EmailNotificationRequest" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>319</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns10:ArrayOfResponse" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns10:ArrayOfResponse" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>321</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns10:NotificationServiceErrorMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns10:NotificationServiceErrorMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>327</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>327</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:FromAccountName" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>327</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:FromAccountName" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>331</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>331</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:Bcc" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>331</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:Bcc" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>335</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>335</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:Cc" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>335</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:Cc" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>339</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>339</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:ReplyToAddress" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>339</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:ReplyToAddress" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>342</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check expression syntax on &lt;bpel:from>.</fix>
+      <msg>The expression "concat($outputVariable.payload/ns2:status, 'Your ..." has invalid syntax - Unexpected '%$outputVariable.payload/ns2:status, string('%>'), Your order status:, &lt;%'Your order status: ' &lt;%$outputVariable.payload/ns2:status, string('%>%>'), $customerEV/ns7:Status)'</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>343</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>343</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:Subject" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>343</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:Subject" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>346</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check expression syntax on &lt;bpel:from>.</fix>
+      <msg>The expression "concat($customerEV/ns7:Email, concat('Your order ..." has invalid syntax - Unexpected '&lt;'</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>347</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>347</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:To" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>347</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:To" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>350</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check expression syntax on &lt;bpel:from>.</fix>
+      <msg>The expression "&lt;p>Dear $customerEV/ns7:FirstName,&lt;/p> &lt;p>The st ..." has invalid syntax - Unexpected '&lt;'</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>351</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>351</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:Content/child::ns10:ContentBody" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>351</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:Content" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>355</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>355</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Change the part name used in this expression or define this part name in the message type definition used by this variable.</fix>
+      <msg>The LocationPath expression "child::ns10:Content/child::ns10:MimeType" is not allowed in &lt;bpel:query> as there is no implicit context node present.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>355</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the type definition associated with the BPEL variable.</fix>
+      <msg>The XPath segment "child::ns10:Content" cannot be resolved.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>360</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>360</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>360</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "outputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "outputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>360</line>
+      <col/>
+      <file>BPEL/ApproveCCOrder.bpel</file>
+      <name>BPEL/ApproveCCOrder.bpel</name>
+      <fix>Make sure that value "ns10:NotificationService" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns10:NotificationService" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
       <severity>warning</severity>
       <loc/>
       <line/>
@@ -21,63 +2151,923 @@
       <msg>Error assignee not specified</msg>
    </Fault>
    <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>34</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Please check import location or element QNames.</fix>
+      <msg>javax.wsdl.WSDLException: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect: WSDLException: faultCode=INVALID_WSDL: Error reading import of file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/FulfillmentPr.wsdl: oracle.j2ee.ws.wsdl.LocalizedWSDLException: WSDLException: faultCode=PARSER_ERROR: Failed to read wsdl file at: "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL", caused by: java.net.SocketException.: java.net.SocketException: Permission denied: connect</msg>
+   </Fault>
+   <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>229</line>
+      <line>36</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check location "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL" and import type "http://schemas.xmlsoap.org/wsdl/"</fix>
+      <msg>Cannot import type "http://schemas.xmlsoap.org/wsdl/" from location "http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>39</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check location "../Schemas/fulfillment.xsd" and import type "http://www.w3.org/2001/XMLSchema"</fix>
+      <msg>Cannot import type "http://www.w3.org/2001/XMLSchema" from location "../Schemas/fulfillment.xsd"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>40</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check location "../WSDLs/FulfillmentPr.wsdl" and import type "http://schemas.xmlsoap.org/wsdl/"</fix>
+      <msg>Cannot import type "http://schemas.xmlsoap.org/wsdl/" from location "../WSDLs/FulfillmentPr.wsdl"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>53</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "client:FulfillmentPr" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "client:FulfillmentPr" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>55</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventory" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns3:ManageInventory" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>57</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStock" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns4:ManageStock" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>58</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns6:OrdersService" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns6:OrdersService" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>59</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns7:CustomerService" is resolvable (check imports, value of "partnerLinkType").</fix>
+      <msg>"partnerLinkType" is set to "ns7:CustomerService" on this &lt;bpel:partnerLink>  but it cannot be resolved (check value of "partnerLinkType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>70</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "client:FulfillmentPrRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "client:FulfillmentPrRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>73</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "client:FulfillmentPrResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "client:FulfillmentPrResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>74</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns6:ordersViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns6:ordersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>75</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns6:ordersViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns6:ordersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>76</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns7:customersViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns7:customersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>88</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>88</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "client:FulfillmentPr" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "client:FulfillmentPr" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>88</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>103</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>116</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:ManageInventoryRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>118</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:ManageInventoryResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>120</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns4:ManageStockRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>122</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns4:ManageStockResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>124</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:ManageInventoryRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>126</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns3:ManageInventoryResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>128</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockRequestMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns4:ManageStockRequestMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>130</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockResponseMessage" is resolvable (check imports, value of "messageType").</fix>
+      <msg>"messageType" is set to "ns4:ManageStockResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>141</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>147</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>147</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>147</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventory" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns3:ManageInventory" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>150</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>150</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns3:ManageInventoryCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>150</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>159</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>164</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>164</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>164</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStock" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns4:ManageStock" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>167</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>167</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns4:ManageStockCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>167</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>178</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>179</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>193</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>193</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>193</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventory" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns3:ManageInventory" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>196</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>196</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns3:ManageInventoryCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns3:ManageInventoryCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>196</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>206</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>207</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>221</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>221</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>221</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStock" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns4:ManageStock" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>224</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>224</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns4:ManageStockCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "ns4:ManageStockCallback" on this &lt;bpel:receive> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>224</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>258</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns1:ShippingRequest" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns1:ShippingRequest" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>259</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns7:addressViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns7:addressViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>263</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Types must be compatible.</fix>
-      <msg>The from-spec of "xsd:string" is not compatible with to-spec of "client:FulfillmentPrResponseMessage"</msg>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>297</line>
+      <line>267</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Add a predicate to select an element from the sequence.</fix>
-      <msg>The XPath segment "child::ns7:AddressView" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>301</line>
+      <line>296</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Add a predicate to select an element from the sequence.</fix>
-      <msg>The XPath segment "child::ns7:AddressView" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>305</line>
+      <line>300</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Add a predicate to select an element from the sequence.</fix>
-      <msg>The XPath segment "child::ns7:AddressView" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>309</line>
+      <line>304</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Add a predicate to select an element from the sequence.</fix>
-      <msg>The XPath segment "child::ns7:AddressView" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>313</line>
+      <line>308</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Add a predicate to select an element from the sequence.</fix>
-      <msg>The XPath segment "child::ns7:AddressView" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>312</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Types must be compatible.</fix>
+      <msg>The from-spec of "type" is not compatible with to-spec of "type"</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>358</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:partnerLink specified on this activity via attribute "partnerLink" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:partnerLink (via the attribute "partnerLink") - this bpel:partnerLink needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>358</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this activity via attribute "inputVariable" and make sure it is itself specified correctly.</fix>
+      <msg>The activity &lt;bpel:invoke> refers to a bpel:variable (via the attribute "inputVariable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>358</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "client:FulfillmentPrCallback" is resolvable (check imports, value of "portType").</fix>
+      <msg>"portType" is set to "client:FulfillmentPrCallback" on this &lt;bpel:invoke> activity but it cannot be resolved (check value of "portType", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "EnrichPO" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPrCallback" for "EnrichPO" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPrCallback" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
+      <line>227</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_ptt" for "ApproveCCOrder" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
+      <line>227</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_ptt" for "ValidateCCService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
+      <line>243</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
+      <line>243</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
+      <line>239</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/orderssdo/common/}OrdersService" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
+      <line>239</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/orderssdo/common/}OrdersService" for "OrdersService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
+      <line>235</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
+      <line>235</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStock" for "OnlineStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
+      <line>235</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStockCallback" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
+      <line>235</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/OnlineStore/ManageStock}ManageStockCallback" for "OnlineStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
+      <line>231</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
+      <line>231</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventory" for "InternalStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
+      <line>231</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventoryCallback" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
+      <line>231</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/Application1/InStore/ManageInventory}ManageInventoryCallback" for "InternalStore" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "ApproveCCOrder" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPr" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPrCallback" for "ApproveCCOrder" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
+      <line>219</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/POApplication/POProcessing/FulfillmentPr}FulfillmentPrCallback" for "FulfillmentPr" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
+      <line>243</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "ApproveCCOrder" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
+      <line>243</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
    </Fault>
 </Faults>

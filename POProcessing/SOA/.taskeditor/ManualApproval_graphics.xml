@@ -24,4 +24,4 @@
    <notification_component expand="false"/>
    <advanced_component expand="false"/>
    <annotations_component expand="false"/>
-</graphics>
+<parameters_component expand="true"/><assignees_component expand="true"/><expiration_component expand="false"/><notification_component expand="false"/><advanced_component expand="false"/><annotations_component expand="false"/></graphics>

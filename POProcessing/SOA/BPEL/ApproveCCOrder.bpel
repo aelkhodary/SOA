@@ -33,8 +33,15 @@
          xmlns:ns4="http://www.example.org/ns/ccauthorize" xmlns:ns5="http://www.example.org/ns/fulfillment"
          xmlns:ns6="http://xmlns.oracle.com/bpel/workflow/taskService" xmlns:ns7="/customersdo/common/"
          xmlns:task="http://xmlns.oracle.com/bpel/workflow/task"
-         xmlns:wfcommon="http://xmlns.oracle.com/bpel/workflow/common">
-
+         xmlns:wfcommon="http://xmlns.oracle.com/bpel/workflow/common"
+         xmlns:wf="http://schemas.oracle.com/bpel/extensions/workflow"
+         xmlns:ns8="http://xmlns.oracle.com/bpel/workflow/TaskEvidenceService"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ns9="http://xmlns.oracle.com/bpel/workflow/routingSlip"
+         xmlns:ns10="http://xmlns.oracle.com/ias/pcbpel/NotificationService">
+    <import namespace="/customersdo/common/types/"
+            location="http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd"
+            importType="http://www.w3.org/2001/XMLSchema"/>
     <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/POApplication/POProcessing/ApproveCCOrder" location="../WSDLs/ApproveCCOrder.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <!-- 
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,6 +62,8 @@
         <partnerLink name="ManualApproval.TaskService" partnerLinkType="ns6:TaskService" partnerRole="TaskService"
                      myRole="TaskServiceCallbackListener"/>
         <partnerLink name="CustomerService" partnerLinkType="ns7:CustomerService" partnerRole="CustomerSDOService"/>
+        <partnerLink name="NotificationService1" partnerLinkType="ns10:NotificationServiceLink"
+                     partnerRole="NotificationServiceProvider"/>
     </partnerLinks>
 
     <!-- 
@@ -70,6 +79,7 @@
         <!-- Reference to the message that will be sent back to the requester during callback -->
         <variable name="outputVariable" messageType="client:ApproveCCOrderResponseMessage"/>
         <variable name="ManualApproval1_globalVariable" messageType="ns6:taskMessage"/>
+        <variable name="ManualApproval2_globalVariable" messageType="ns6:taskMessage"/>
     </variables>
 
     <!-- 
@@ -147,6 +157,11 @@
                                        wf:key="ManualApproval1_globalVariable">
                                     <bpelx:annotation>
                                         <bpelx:pattern patternName="bpelx:workflow"></bpelx:pattern>
+                                        <bpelx:general>
+                                            <bpelx:property name="userLabel">
+                                                <![CDATA[ApprovalTaskForm]]>
+                                            </bpelx:property>
+                                        </bpelx:general>
                                     </bpelx:annotation>
                                     <variables>
                                         <variable name="initiateTaskInput" messageType="ns6:initiateTaskMessage"/>
@@ -157,21 +172,17 @@
                                         <assign name="ManualApproval2_AssignTaskAttributes">
                                             <copy>
                                                 <from>number(3)</from>
-                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:priority</query></to>
-                                            </copy>
-                                            <copy>
-                                                <from>number(3)</from>
-                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:priority</query></to>
+                                                <to>$initiateTaskInput.payload/task:task/task:priority</to>
                                             </copy>
                                             <copy>
                                                 <from><literal><payload xmlns="http://xmlns.oracle.com/bpel/workflow/task">
 	<order xmlns="http://www.example.org/ns/intorder"/> 
 </payload></literal></from>
-                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:payload</query></to>
+                                                <to>$initiateTaskInput.payload/task:task/task:payload</to>
                                             </copy>
                                             <copy>
-                                                <from variable="outputVariable" part="payload"/>
-                                                <to variable="initiateTaskInput" part="payload"><query>task:task/task:payload/ns2:order</query></to>
+                                                <from>$outputVariable.payload</from>
+                                                <to>$initiateTaskInput.payload/task:task/task:payload/ns2:order</to>
                                             </copy>
                                         </assign>
                                         <invoke name="initiateTask_ManualApproval2"
@@ -192,8 +203,14 @@
                                     <sequence>
                                         <assign name="CopyPayloadFromTask">
                                             <copy>
-                                                <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
-                                                <to variable="outputVariable" part="payload"/>
+                                                <from>$ManualApproval2_globalVariable.payload/task:payload/ns2:order</from>
+                                                <to>$outputVariable.payload</to>
+                                            </copy>
+                                        </assign>
+                                        <assign name="Assign_manualapprove">
+                                            <copy>
+                                                <from>'approved'</from>
+                                                <to>$outputVariable.payload/ns2:status</to>
                                             </copy>
                                         </assign>
                                     </sequence>
@@ -205,57 +222,65 @@
                                         <sequence>
                                             <assign name="CopyPayloadFromTask">
                                                 <copy>
-                                                    <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
-                                                    <to variable="outputVariable" part="payload"/>
+                                                    <from>$ManualApproval2_globalVariable.payload/task:payload/ns2:order</from>
+                                                    <to>$outputVariable.payload</to>
+                                                </copy>
+                                            </assign>
+                                            <assign name="Assign_manualreject">
+                                                <copy>
+                                                    <from>'rejected'</from>
+                                                    <to>$outputVariable.payload/ns2:status</to>
                                                 </copy>
                                             </assign>
                                         </sequence>
                                     </elseif>
-                                    <else>
-                                        <sequence>
-                                            <assign name="CopyPayloadFromTask">
-                                                <copy>
-                                                    <from variable="ManualApproval1_globalVariable" part="payload"><query>task:payload/ns2:order</query></from>
-                                                    <to variable="outputVariable" part="payload"/>
-                                                </copy>
-                                            </assign>
-                                        </sequence>
-                                    </else>
                                 </if>
                             </sequence>
                             <else>
-                                <assign name="Assign_autoapproved"></assign>
-                            </else>
-                        </if>
-                        <scope name="Scope_fullfilment">
-                            <variables>
-                                <variable name="fulfillmentRequest" messageType="ns1:FulfillmentPrRequestMessage"/>
-                                <variable name="fulfillmentResponse" messageType="ns1:FulfillmentPrResponseMessage"/>
-                            </variables>
-                            <sequence name="Sequence2">
-                                <assign name="Transformation_fulfillment">
-                                    <bpelx:annotation>
-                                        <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
-                                    </bpelx:annotation>
+                                <assign name="Assign_autoapproved">
                                     <copy>
-                                        <from>ora:doXSLTransformForDoc("../Transformations/Transformation_to_fulfillment.xsl", $outputVariable.payload)</from>
-                                        <to variable="fulfillmentRequest" part="payload"/>
-                                    </copy>
-                                </assign>
-                                <invoke name="Invoke_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
-                                        portType="ns1:FulfillmentPr" operation="process"
-                                        inputVariable="fulfillmentRequest" bpelx:invokeAsDetail="no"/>
-                                <receive name="Receive_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
-                                         portType="ns1:FulfillmentPrCallback" operation="processResponse"
-                                         variable="fulfillmentResponse"/>
-                                <assign name="Assign_fulfillment_status">
-                                    <copy>
-                                        <from>$fulfillmentResponse.payload/ns5:shipStatus</from>
+                                        <from>' approved'</from>
                                         <to>$outputVariable.payload/ns2:status</to>
                                     </copy>
                                 </assign>
-                            </sequence>
-                        </scope>
+                            </else>
+                        </if>
+                        <if name="Switch_approved">
+                            <documentation>
+                                <![CDATA[Fulfill Approved]]>
+                            </documentation>
+                            <condition>$outputVariable.payload/ns2:status ='approved'</condition>
+                            <scope name="Scope_fullfilment">
+                                <variables>
+                                    <variable name="fulfillmentRequest" messageType="ns1:FulfillmentPrRequestMessage"/>
+                                    <variable name="fulfillmentResponse"
+                                              messageType="ns1:FulfillmentPrResponseMessage"/>
+                                </variables>
+                                <sequence name="Sequence2">
+                                    <assign name="Transformation_fulfillment">
+                                        <bpelx:annotation>
+                                            <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+                                        </bpelx:annotation>
+                                        <copy>
+                                            <from>ora:doXSLTransformForDoc("../Transformations/Transformation_to_fulfillment.xsl", $outputVariable.payload)</from>
+                                            <to variable="fulfillmentRequest" part="payload"/>
+                                        </copy>
+                                    </assign>
+                                    <invoke name="Invoke_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
+                                            portType="ns1:FulfillmentPr" operation="process"
+                                            inputVariable="fulfillmentRequest" bpelx:invokeAsDetail="no"/>
+                                    <receive name="Receive_fulfillment" partnerLink="FulfillmentPr.fulfillmentpr_client"
+                                             portType="ns1:FulfillmentPrCallback" operation="processResponse"
+                                             variable="fulfillmentResponse"/>
+                                    <assign name="Assign_fulfillment_status">
+                                        <copy>
+                                            <from>$fulfillmentResponse.payload/ns5:shipStatus</from>
+                                            <to>$outputVariable.payload/ns2:status</to>
+                                        </copy>
+                                    </assign>
+                                </sequence>
+                            </scope>
+                        </if>
                     </sequence>
                     <else>
                         <documentation>
@@ -275,5 +300,67 @@
           Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
         -->
         <invoke name="callbackClient" partnerLink="approveccorder_client" portType="client:ApproveCCOrderCallback" operation="processResponse" inputVariable="outputVariable"/>
+        <scope name="Scope_notifycust">
+            <variables>
+                <variable name="customerEV" element="ns7:customersViewSDO" bpelx:entity.si="CustomerService"/>
+            </variables>
+            <sequence name="Sequence6">
+                <extensionActivity>
+                    <bpelx:bindEntity name="BindEntity_customer" variable="customerEV">
+                        <bpelx:key keyname="ns7:CustId">$inputVariable.payload/ns2:customerId</bpelx:key>
+                    </bpelx:bindEntity>
+                </extensionActivity>
+                <scope name="Email_customer">
+                    <bpelx:annotation>
+                        <bpelx:pattern patternName="bpelx:email"></bpelx:pattern>
+                    </bpelx:annotation>
+                    <variables>
+                        <variable name="varNotificationReq" messageType="ns10:EmailNotificationRequest"/>
+                        <variable name="varNotificationResponse" messageType="ns10:ArrayOfResponse"/>
+                        <variable name="NotificationServiceFaultVariable"
+                                  messageType="ns10:NotificationServiceErrorMessage"/>
+                    </variables>
+                    <sequence name="Sequence7">
+                        <assign name="EmailParamsAssign">
+                            <copy>
+                                <from>string('Default')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:FromAccountName</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:Bcc</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:Cc</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:ReplyToAddress</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('test')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:Subject</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('aa@ee.com')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:To</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('body of email')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:Content/ns10:ContentBody</query></to>
+                            </copy>
+                            <copy>
+                                <from>string('text/html; charset=UTF-8')</from>
+                                <to variable="varNotificationReq" part="EmailPayload"><query>ns10:Content/ns10:MimeType</query></to>
+                            </copy>
+                        </assign>
+                        <invoke name="InvokeNotificationService" portType="ns10:NotificationService"
+                                partnerLink="NotificationService1" inputVariable="varNotificationReq"
+                                outputVariable="varNotificationResponse" operation="sendEmailNotification"/>
+                    </sequence>
+                </scope>
+            </sequence>
+        </scope>
     </sequence>
 </process>
