@@ -31,7 +31,8 @@
          xmlns:ns3="http://xmlns.oracle.com/Application1/InStore/ManageInventory"
          xmlns:ns4="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock"
          xmlns:ns5="http://www.example.org/ns/store" xmlns:ns6="/orderssdo/common/"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns7="/customersdo/common/">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns7="/customersdo/common/"
+         xmlns:ns8="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1">
     <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
             importType="http://schemas.xmlsoap.org/wsdl/"/>
    

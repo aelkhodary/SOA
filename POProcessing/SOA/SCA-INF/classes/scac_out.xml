@@ -105,10 +105,60 @@
       <loc/>
       <line/>
       <col/>
-      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</file>
-      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ReceivePO.wsdl</name>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
       <fix/>
       <msg>Error in getting XML input stream: http://localhost:8001/CustomerSDO/CustomerSDOService?XSD=/customersdo/common/serviceinterface/CustomerSDOService.xsd: Connection refused: connect</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1}callFunctionStateless</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1}callFunctionStatelessDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1}callFunctionStateful</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1}callFunctionStatefulDecision</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>file:/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</file>
+      <name>/D:/MyWork/POApplication/POProcessing/SOA/WSDLs/ShippingRules_DecisionService_1.wsdl</name>
+      <fix/>
+      <msg>Message part "payload" is undefined [element = {http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1}errorInfo</msg>
    </Fault>
    <Fault>
       <severity>error</severity>
@@ -1183,7 +1233,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>205</line>
+      <line>215</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1193,7 +1243,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>205</line>
+      <line>215</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1203,7 +1253,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='CustomerService']</loc>
-      <line>205</line>
+      <line>215</line>
       <col>113</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1213,7 +1263,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>188</line>
+      <line>198</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1223,7 +1273,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>188</line>
+      <line>198</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1233,7 +1283,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OnlineStore']</loc>
-      <line>188</line>
+      <line>198</line>
       <col>114</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1243,7 +1293,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>198</line>
+      <line>208</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1253,7 +1303,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>198</line>
+      <line>208</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1263,7 +1313,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='OrdersService']</loc>
-      <line>198</line>
+      <line>208</line>
       <col>104</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1273,7 +1323,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>177</line>
+      <line>187</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1283,7 +1333,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>177</line>
+      <line>187</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1293,7 +1343,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='InternalStore']</loc>
-      <line>177</line>
+      <line>187</line>
       <col>120</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1303,7 +1353,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>168</line>
+      <line>178</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1313,7 +1363,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>168</line>
+      <line>178</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1323,7 +1373,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:reference[@name='ValidateCCService']</loc>
-      <line>168</line>
+      <line>178</line>
       <col>136</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1331,9 +1381,19 @@
       <msg>Failed to Find Binding "ValidateCCService":"{http://xmlns.oracle.com/POApplication/CreditCardValidation/ValidateCreditCard}validateCC_pt" in WSDL Manager</msg>
    </Fault>
    <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:component[@name='ShippingRules/ShippingRules_DecisionService_1']</loc>
+      <line/>
+      <col/>
+      <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
+      <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
+      <fix/>
+      <msg>The service "ShippingRules_DecisionService_1" exposed by component "ShippingRules" is not wired to/used by any other component.</msg>
+   </Fault>
+   <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='EnrichPO']</loc>
-      <line>67</line>
+      <line>69</line>
       <col>30</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1343,7 +1403,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>86</line>
+      <line>88</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1353,7 +1413,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>86</line>
+      <line>88</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1363,7 +1423,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='ApproveCCOrder']</loc>
-      <line>86</line>
+      <line>88</line>
       <col>50</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1373,7 +1433,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>118</line>
+      <line>120</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1383,7 +1443,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>118</line>
+      <line>120</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1393,7 +1453,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>118</line>
+      <line>120</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1403,7 +1463,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>118</line>
+      <line>120</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -1413,12 +1473,22 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:component[@name='FulfillmentPr']</loc>
-      <line>118</line>
+      <line>120</line>
       <col>49</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
       <fix/>
       <msg>Cannot find Port Type "{/customersdo/common/}CustomerSDOService" for "CustomerService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>ShippingRules</loc>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>Rule Dictionary ShippingRules is invalid.</msg>
    </Fault>
    <Fault>
       <severity>error</severity>
@@ -2283,7 +2353,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>34</line>
+      <line>35</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2293,7 +2363,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>36</line>
+      <line>37</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2303,7 +2373,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>39</line>
+      <line>40</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2313,7 +2383,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>40</line>
+      <line>41</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2323,7 +2393,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>53</line>
+      <line>54</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2333,7 +2403,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>55</line>
+      <line>56</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2343,7 +2413,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>57</line>
+      <line>58</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2353,7 +2423,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>58</line>
+      <line>59</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2363,7 +2433,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>59</line>
+      <line>60</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2373,7 +2443,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>70</line>
+      <line>71</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2383,22 +2453,12 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>73</line>
+      <line>74</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Make sure that value "client:FulfillmentPrResponseMessage" is resolvable (check imports, value of "messageType").</fix>
       <msg>"messageType" is set to "client:FulfillmentPrResponseMessage" on this &lt;bpel:variable>  but it cannot be resolved (check value of "messageType", imports, WSDLs or XSDs).</msg>
-   </Fault>
-   <Fault>
-      <severity>error</severity>
-      <loc/>
-      <line>74</line>
-      <col/>
-      <file>BPEL/FulfillmentPr.bpel</file>
-      <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Make sure that value "ns6:ordersViewSDO" is resolvable (check imports, value of "element").</fix>
-      <msg>"element" is set to "ns6:ordersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
    </Fault>
    <Fault>
       <severity>error</severity>
@@ -2417,13 +2477,23 @@
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Make sure that value "ns6:ordersViewSDO" is resolvable (check imports, value of "element").</fix>
+      <msg>"element" is set to "ns6:ordersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>77</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Make sure that value "ns7:customersViewSDO" is resolvable (check imports, value of "element").</fix>
       <msg>"element" is set to "ns7:customersViewSDO" on this &lt;bpel:variable>  but it cannot be resolved (check value of "element", imports, WSDLs or XSDs).</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>88</line>
+      <line>89</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2433,7 +2503,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>88</line>
+      <line>89</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2443,7 +2513,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>88</line>
+      <line>89</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2453,7 +2523,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>103</line>
+      <line>104</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2463,7 +2533,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>116</line>
+      <line>117</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2473,7 +2543,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>118</line>
+      <line>119</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2483,7 +2553,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>120</line>
+      <line>121</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2493,7 +2563,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>122</line>
+      <line>123</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2503,7 +2573,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>124</line>
+      <line>125</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2513,7 +2583,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>126</line>
+      <line>127</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2523,7 +2593,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>128</line>
+      <line>129</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2533,7 +2603,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>130</line>
+      <line>131</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2543,7 +2613,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>141</line>
+      <line>142</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2553,7 +2623,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>147</line>
+      <line>148</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2563,7 +2633,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>147</line>
+      <line>148</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2573,7 +2643,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>147</line>
+      <line>148</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2583,7 +2653,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>150</line>
+      <line>151</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2593,7 +2663,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>150</line>
+      <line>151</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2603,7 +2673,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>150</line>
+      <line>151</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2613,7 +2683,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>159</line>
+      <line>160</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2623,7 +2693,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>164</line>
+      <line>165</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2633,7 +2703,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>164</line>
+      <line>165</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2643,7 +2713,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>164</line>
+      <line>165</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2653,7 +2723,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>167</line>
+      <line>168</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2663,7 +2733,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>167</line>
+      <line>168</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2673,22 +2743,12 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>167</line>
+      <line>168</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
       <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
-   </Fault>
-   <Fault>
-      <severity>warning</severity>
-      <loc/>
-      <line>178</line>
-      <col/>
-      <file>BPEL/FulfillmentPr.bpel</file>
-      <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
-      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
@@ -2698,12 +2758,22 @@
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>180</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
       <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>193</line>
+      <line>194</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2713,7 +2783,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>193</line>
+      <line>194</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2723,7 +2793,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>193</line>
+      <line>194</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2733,7 +2803,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>196</line>
+      <line>197</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2743,7 +2813,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>196</line>
+      <line>197</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2753,22 +2823,12 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>196</line>
+      <line>197</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Check the bpel:variable specified on this activity via attribute "variable" and make sure it is itself specified correctly.</fix>
       <msg>The activity &lt;bpel:receive> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
-   </Fault>
-   <Fault>
-      <severity>warning</severity>
-      <loc/>
-      <line>206</line>
-      <col/>
-      <file>BPEL/FulfillmentPr.bpel</file>
-      <name>BPEL/FulfillmentPr.bpel</name>
-      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
-      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
@@ -2778,12 +2838,22 @@
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
       <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
+      <msg>The node &lt;bpel:from> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>208</line>
+      <col/>
+      <file>BPEL/FulfillmentPr.bpel</file>
+      <name>BPEL/FulfillmentPr.bpel</name>
+      <fix>Check the bpel:variable specified on this node via attribute "variable" and make sure it is itself specified correctly.</fix>
       <msg>The node &lt;bpel:to> refers to a bpel:variable (via the attribute "variable") - this bpel:variable needs to be defined correctly.</msg>
    </Fault>
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>221</line>
+      <line>222</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2793,7 +2863,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>221</line>
+      <line>222</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2803,7 +2873,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>221</line>
+      <line>222</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2813,7 +2883,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>224</line>
+      <line>225</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2823,7 +2893,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>224</line>
+      <line>225</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2833,7 +2903,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>224</line>
+      <line>225</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2843,7 +2913,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>258</line>
+      <line>259</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2853,7 +2923,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>259</line>
+      <line>260</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2863,7 +2933,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>263</line>
+      <line>264</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2873,7 +2943,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>267</line>
+      <line>268</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2883,7 +2953,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>296</line>
+      <line>297</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2893,7 +2963,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>300</line>
+      <line>301</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2903,7 +2973,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>304</line>
+      <line>305</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2913,7 +2983,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>308</line>
+      <line>309</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2923,7 +2993,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>312</line>
+      <line>313</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2933,7 +3003,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>358</line>
+      <line>359</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2943,7 +3013,7 @@
    <Fault>
       <severity>warning</severity>
       <loc/>
-      <line>358</line>
+      <line>359</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2953,7 +3023,7 @@
    <Fault>
       <severity>error</severity>
       <loc/>
-      <line>358</line>
+      <line>359</line>
       <col/>
       <file>BPEL/FulfillmentPr.bpel</file>
       <name>BPEL/FulfillmentPr.bpel</name>
@@ -2973,7 +3043,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2983,7 +3053,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -2993,7 +3063,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3003,7 +3073,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3013,7 +3083,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
-      <line>243</line>
+      <line>253</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3023,7 +3093,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='ValidateCCService']</loc>
-      <line>243</line>
+      <line>253</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3033,7 +3103,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>259</line>
+      <line>269</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3043,7 +3113,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>259</line>
+      <line>269</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3053,7 +3123,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
-      <line>255</line>
+      <line>265</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3063,7 +3133,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OrdersService']</loc>
-      <line>255</line>
+      <line>265</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3073,7 +3143,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>251</line>
+      <line>261</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3083,7 +3153,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>251</line>
+      <line>261</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3093,7 +3163,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>251</line>
+      <line>261</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3103,7 +3173,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='OnlineStore']</loc>
-      <line>251</line>
+      <line>261</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3113,7 +3183,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>247</line>
+      <line>257</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3123,7 +3193,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>247</line>
+      <line>257</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3133,7 +3203,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>247</line>
+      <line>257</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3143,7 +3213,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStore']</loc>
-      <line>247</line>
+      <line>257</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3153,7 +3223,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3163,7 +3233,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3173,7 +3243,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3183,7 +3253,7 @@
    <Fault>
       <severity>warning</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='FulfillmentPr/fulfillmentpr_client']</loc>
-      <line>235</line>
+      <line>245</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3193,7 +3263,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>259</line>
+      <line>269</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>
@@ -3203,7 +3273,7 @@
    <Fault>
       <severity>error</severity>
       <loc>/ns:composite/ns:wire/ns:target.uri[.='CustomerService']</loc>
-      <line>259</line>
+      <line>269</line>
       <col>17</col>
       <file>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</file>
       <name>D:\MyWork\POApplication\POProcessing\SOA\composite.xml</name>

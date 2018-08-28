@@ -47,6 +47,8 @@
           location="WSDLs/ApprovalRules_DecisionService_1.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
           location="WSDLs/ApprovalRules_DecisionService_1Wrapper.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1"
+          location="WSDLs/ShippingRules_DecisionService_1.wsdl" importType="wsdl"/>
   <service name="ReceivePO" ui:wsdlLocation="WSDLs/ReceivePO.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.endpoint(ReceivePO/execute_pt)">
@@ -156,6 +158,14 @@
     <componentType>
       <service name="ApprovalRules_DecisionService_1" ui:wsdlLocation="WSDLs/ApprovalRules_DecisionService_1.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1#wsdl.interface(IDecisionService)"/>
+      </service>
+    </componentType>
+  </component>
+  <component name="ShippingRules">
+    <implementation.decision src="ShippingRules.decs"/>
+    <componentType>
+      <service name="ShippingRules_DecisionService_1" ui:wsdlLocation="WSDLs/ShippingRules_DecisionService_1.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1#wsdl.interface(IDecisionService)"/>
       </service>
     </componentType>
   </component>
