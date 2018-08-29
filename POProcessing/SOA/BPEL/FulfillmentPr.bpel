@@ -32,7 +32,8 @@
          xmlns:ns4="http://xmlns.oracle.com/Application1/OnlineStore/ManageStock"
          xmlns:ns5="http://www.example.org/ns/store" xmlns:ns6="/orderssdo/common/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns7="/customersdo/common/"
-         xmlns:ns8="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1">
+         xmlns:ns8="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1"
+         xmlns:ns9="http://xmlns.oracle.com/bpel" xmlns:ns10="http://www.example.org/ns/shippingrules">
     <import namespace="/customersdo/common/" location="http://localhost:8001/CustomerSDO/CustomerSDOService?WSDL"
             importType="http://schemas.xmlsoap.org/wsdl/"/>
    
@@ -58,6 +59,9 @@
                      partnerRole="ManageStockProvider"/>
         <partnerLink name="OrdersService" partnerLinkType="ns6:OrdersService" partnerRole="OrdersService"/>
         <partnerLink name="CustomerService" partnerLinkType="ns7:CustomerService" partnerRole="CustomerSDOService"/>
+        <partnerLink name="ShippingRules.ShippingRules_DecisionService_1"
+                     partnerLinkType="ns8:ShippingRules.ShippingRules_DecisionService_1"
+                     partnerRole="IDecisionService"/>
     </partnerLinks>
 
     <!-- 
@@ -315,11 +319,43 @@
                             <to>$shippingRequest/ns1:shippingAddress/ns1:country</to>
                         </copy>
                     </assign>
+                    <scope name="Business_shippingrule">
+                        <bpelx:annotation>
+                            <bpelx:pattern patternName="bpelx:decide"></bpelx:pattern>
+                        </bpelx:annotation>
+                        <variables>
+                            <variable name="dsIn" messageType="ns8:callFunctionStatelessMessage"/>
+                            <variable name="dsOut" messageType="ns8:callFunctionStatelessDecisionMessage"/>
+                        </variables>
+                        <sequence name="Sequence8">
+                            <assign name="Facts_To_Rule_Service">
+                                <copy>
+                                    <from variable="inputVariable" part="payload"><query>ns2:shipMethod</query></from>
+                                    <to variable="dsIn" part="payload"><query>ns8:parameterList/ns10:shippinginfo/ns10:shipChoice</query></to>
+                                </copy>
+                            </assign>
+                            <assign name="BPEL_Header">
+                                <copy>
+                                    <from>"ShippingRules_DecisionService_1"</from>
+                                    <to variable="dsIn" part="payload"><query>@name</query></to>
+                                </copy>
+                            </assign>
+                            <invoke name="Invoke" partnerLink="ShippingRules.ShippingRules_DecisionService_1"
+                                    portType="ns8:IDecisionService" operation="callFunctionStateless"
+                                    inputVariable="dsIn" outputVariable="dsOut"/>
+                            <assign name="Rule_Service_To_Facts">
+                                <copy>
+                                    <from variable="dsOut" part="payload"><query>ns8:resultList/ns10:shippingcompany/ns10:carrier</query></from>
+                                    <to variable="outputVariable" part="payload"><query>ns1:carrier</query></to>
+                                </copy>
+                            </assign>
+                        </sequence>
+                    </scope>
                     <if name="If_shiporder">
                         <documentation>
                             <![CDATA[UPS]]>
                         </documentation>
-                        <condition>$inputVariable.payload/ns2:shipMethod='two_day'</condition>
+                        <condition>$outputVariable.payload/ns1:carrier='UPS'</condition>
                         <sequence name="Sequence2">
                             <empty name="Invoke_UPS"/>
                         </sequence>
@@ -327,14 +363,14 @@
                             <documentation>
                                 <![CDATA[USPS]]>
                             </documentation>
-                            <condition>$inputVariable.payload/ns2:shipMethod ='five_day'</condition>
+                            <condition>$outputVariable.payload/ns1:carrier='USPS'</condition>
                             <empty name="Empty3"/>
                         </elseif>
                         <elseif>
                             <documentation>
                                 <![CDATA[FedEx]]>
                             </documentation>
-                            <condition>$inputVariable.payload/ns2:shipMethod ='next_day' or $inputVariable.payload/ns2:shipMethod='international'</condition>
+                            <condition>$outputVariable.payload/ns1:carrier='FedEx'</condition>
                             <empty name="Empty4"/>
                         </elseif>
                         <else>

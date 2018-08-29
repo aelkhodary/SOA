@@ -1177,7 +1177,7 @@
       <DecisionFunctionRuleSet id="L}121">
         <CreationUpdateNumber>4</CreationUpdateNumber>
         <Form>rule set</Form>
-        <Ruleset>Ruleset1</Ruleset>
+        <Ruleset>ShippingRuleSet</Ruleset>
         <refID>G}397a9f7b:16580a65313:-7c15</refID>
       </DecisionFunctionRuleSet>
       <DecisionFunctionOutput id="G}397a9f7b:16580a65313:-7c12">
@@ -1189,26 +1189,175 @@
         <List>false</List>
         <Tree>false</Tree>
       </DecisionFunctionOutput>
-      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <ValidationUpdateNumber>16</ValidationUpdateNumber>
       <RuleFiringLimit>10000</RuleFiringLimit>
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>7</UpdateNumber>
-    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+    <UpdateNumber>13</UpdateNumber>
+    <ValidationUpdateNumber>16</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}397a9f7b:16580a65313:-7c15">
-    <Name>Ruleset1</Name>
-    <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>3</ValidationUpdateNumber>
+    <Name>ShippingRuleSet</Name>
+    <Alias>ShippingRuleSet</Alias>
+    <ValidationUpdateNumber>24</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
+    <RuleSheet id="G}-4e9448a0:16587158954:-7c26">
+      <Name>CarrierRule</Name>
+      <Alias>CarrierRule</Alias>
+      <ValidationUpdateNumber>24</ValidationUpdateNumber>
+      <Priority>medium</Priority>
+      <Active>true</Active>
+      <CalendarForm>DateTime</CalendarForm>
+      <TreeMode>false</TreeMode>
+      <Visible>true</Visible>
+      <SimpleTest id="L}138">
+        <FactType>shippinginfo</FactType>
+        <IDofFactType>J}org.example.ns.shippingrules.Shippinginfo</IDofFactType>
+        <FactPath>shippinginfo</FactPath>
+        <FactPathIDs>L}138</FactPathIDs>
+        <Form>FormIsA</Form>
+        <IDofOperator>B}==</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>false</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <ShowPatterns>false</ShowPatterns>
+      <Logical>false</Logical>
+      <Dimension id="L}134">
+        <IDofSharedBucketSet>G}397a9f7b:16580a65313:-7c2a</IDofSharedBucketSet>
+        <DimensionNode id="L}136">
+          <BucketIDTable>G}397a9f7b:16580a65313:-7c27</BucketIDTable>
+          <Values>TWO_DAY</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}163">
+          <BucketIDTable>G}397a9f7b:16580a65313:-7c26</BucketIDTable>
+          <Values>FIVE_DAY</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <DimensionNode id="L}176">
+          <BucketIDTable>G}397a9f7b:16580a65313:-7c28 G}397a9f7b:16580a65313:-7c25</BucketIDTable>
+          <Values>NEXT_DAY INTERNATIONAL</Values>
+          <ParentDimensionNode>B}nil</ParentDimensionNode>
+          <ChildDimensionNodes></ChildDimensionNodes>
+        </DimensionNode>
+        <PrivateBucketSet id="G}-4e9448a0:16587158954:-7c25">
+          <Visible>true</Visible>
+          <CreationUpdateNumber>12</CreationUpdateNumber>
+          <IDofType>J}org.example.ns.shippingrules.Shippinginfo</IDofType>
+          <ListContentID>B}nil</ListContentID>
+          <Type>shippinginfo</Type>
+          <Form>Default</Form>
+          <Bucket id="G}-4e9448a0:16587158954:-7c24">
+            <Name>otherwise</Name>
+            <Alias>otherwise</Alias>
+            <Visible>true</Visible>
+            <CreationUpdateNumber>12</CreationUpdateNumber>
+            <Inclusive>true</Inclusive>
+            <Otherwise>true</Otherwise>
+            <Excluded>false</Excluded>
+            <Expression id="L}139">
+              <IsConstant>true</IsConstant>
+              <ParameterID>B}nil</ParameterID>
+            </Expression>
+          </Bucket>
+          <CalendarForm>Date</CalendarForm>
+          <Excluded>false</Excluded>
+          <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+        </PrivateBucketSet>
+        <SharedBucketSet>ShipOptionType</SharedBucketSet>
+        <Expression id="L}135">
+          <Value>shippinginfo.shipChoice</Value>
+          <ResolvedValue>`L}138`.`J}org.example.ns.shippingrules.Shippinginfo.{shipChoice}`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+      </Dimension>
+      <DTAction id="L}149">
+        <Form>Assert New</Form>
+        <Target>shippingcompany</Target>
+        <ResolvedTarget>`J}public org.example.ns.shippingrules.Shippingcompany()`</ResolvedTarget>
+        <Expression id="L}153">
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>carrier</ParameterAlias>
+          <ParameterID>J}org.example.ns.shippingrules.Shippingcompany.{carrier}</ParameterID>
+          <DTActionParameterName>carrier</DTActionParameterName>
+        </Expression>
+        <DSLId>B}nil</DSLId>
+        <AlwaysSelected>true</AlwaysSelected>
+        <DTActionNode id="L}150">
+          <Selected>false</Selected>
+          <Expression id="L}158">
+            <Value>CarrierType.USPS</Value>
+            <ResolvedValue>`G}397a9f7b:16580a65313:-7c1c`.`J}public static final org.example.ns.shippingrules.CarrierType org.example.ns.shippingrules.CarrierType.USPS`</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>carrier</ParameterAlias>
+            <ParameterID>J}org.example.ns.shippingrules.Shippingcompany.{carrier}</ParameterID>
+            <DTActionParameterName>carrier</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}165">
+          <Selected>false</Selected>
+          <Expression id="L}168">
+            <Value>CarrierType.USPS</Value>
+            <ResolvedValue>`G}397a9f7b:16580a65313:-7c1c`.`J}public static final org.example.ns.shippingrules.CarrierType org.example.ns.shippingrules.CarrierType.USPS`</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>carrier</ParameterAlias>
+            <ParameterID>J}org.example.ns.shippingrules.Shippingcompany.{carrier}</ParameterID>
+            <DTActionParameterName>carrier</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+        <DTActionNode id="L}178">
+          <Selected>false</Selected>
+          <Expression id="L}181">
+            <Value>CarrierType.FED_EX</Value>
+            <ResolvedValue>`G}397a9f7b:16580a65313:-7c1c`.`J}public static final org.example.ns.shippingrules.CarrierType org.example.ns.shippingrules.CarrierType.FED_EX`</ResolvedValue>
+            <IsConstant>false</IsConstant>
+            <ParameterAlias>carrier</ParameterAlias>
+            <ParameterID>J}org.example.ns.shippingrules.Shippingcompany.{carrier}</ParameterID>
+            <DTActionParameterName>carrier</DTActionParameterName>
+          </Expression>
+        </DTActionNode>
+      </DTAction>
+      <DTRule id="L}137">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>12</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}164">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>19</CreationUpdateNumber>
+      </DTRule>
+      <DTRule id="L}177">
+        <Override></Override>
+        <RunBefore></RunBefore>
+        <NoConflict></NoConflict>
+        <OverriddenBy></OverriddenBy>
+        <RunAfter></RunAfter>
+        <CreationUpdateNumber>22</CreationUpdateNumber>
+      </DTRule>
+      <AllowGaps>true</AllowGaps>
+      <ConflictPolicy>manual</ConflictPolicy>
+      <OrderRulesByBucket>false</OrderRulesByBucket>
+      <VerticalOrientation>true</VerticalOrientation>
+    </RuleSheet>
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>3</CreationUpdateNumber>
   </RuleSet>
-  <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>7</UpdateNumber>
+  <ValidationUpdateNumber>24</ValidationUpdateNumber>
+  <UpdateNumber>24</UpdateNumber>
   <ResourceBundle>ShippingRulesTranslations</ResourceBundle>
   <TestModel id="L}3">
     <ValidationUpdateNumber>1</ValidationUpdateNumber>

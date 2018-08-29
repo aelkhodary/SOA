@@ -1,2 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<properties/>
+<properties>
+   <entry key="AG}-20b01d6d:1658116ae0f:-7c2f">Withinlimit</entry>
+   <entry key="AG}-20b01d6d:1658116ae0f:-7c32">approval_limit</entry>
+   <entry key="AG}-20b01d6d:1658116ae0f:-7c30">Abovelimit</entry>
+   <entry key="AG}-33e5e527:16577dfa875:-7c2e">Approvalruleset</entry>
+</properties>

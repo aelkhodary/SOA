@@ -1,2 +1,93 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Faults/>
+<Faults>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='http://localhost:8001/InternalStoreSDO/InteralStoreService?WSDL']</loc>
+      <line>17</line>
+      <col>30</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "http://localhost:8001/InternalStoreSDO/InteralStoreService?WSDL" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='InternalStoreService.wsdl']</loc>
+      <line>19</line>
+      <col>67</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "InternalStoreService.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStoreService']</loc>
+      <line>43</line>
+      <col>96</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/internalstoresdo/common/}InteralStoreService" for "InternalStoreService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStoreService']</loc>
+      <line>43</line>
+      <col>96</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "InternalStoreService":"{/internalstoresdo/common/}InteralStoreServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='InternalStoreService']</loc>
+      <line>43</line>
+      <col>96</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Failed to Find Binding "InternalStoreService":"{/internalstoresdo/common/}InteralStoreServiceSoapHttpPort" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:component[@name='ManageInventory']</loc>
+      <line>29</line>
+      <col>37</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/internalstoresdo/common/}InteralStoreService" for "InternalStoreService" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>0</line>
+      <col/>
+      <file>ManageInventory.bpel</file>
+      <name>ManageInventory.bpel</name>
+      <fix>n/a</fix>
+      <msg>XML parsing failed because "Error in getting XML input stream: http://localhost:8001/InternalStoreSDO/InteralStoreService?WSDL: Connection refused: connect"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStoreService']</loc>
+      <line>54</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/internalstoresdo/common/}InteralStoreService" for "ManageInventory" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='InternalStoreService']</loc>
+      <line>54</line>
+      <col>17</col>
+      <file>D:\MyWork\POApplication\InternalStore\composite.xml</file>
+      <name>D:\MyWork\POApplication\InternalStore\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{/internalstoresdo/common/}InteralStoreService" for "InternalStoreService" in WSDL Manager</msg>
+   </Fault>
+</Faults>

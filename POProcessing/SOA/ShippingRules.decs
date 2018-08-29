@@ -19,7 +19,7 @@
         </pattern>
     </decisionService>
     <schemaInformation>
-        <dictionary fqnPackage="poprocessing" fqnName="ShippingRules" updateNumber="7">
+        <dictionary fqnPackage="poprocessing" fqnName="ShippingRules" updateNumber="24">
             <schemaBrowser>
                 <package>org.example.ns.shippingrules</package>
                 <namespace>http://www.example.org/ns/shippingrules</namespace>

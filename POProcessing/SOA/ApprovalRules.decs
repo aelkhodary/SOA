@@ -19,7 +19,7 @@
         </pattern>
     </decisionService>
     <schemaInformation>
-        <dictionary fqnPackage="poprocessing" fqnName="ApprovalRules" updateNumber="7">
+        <dictionary fqnPackage="poprocessing" fqnName="ApprovalRules" updateNumber="39">
             <schemaBrowser>
                 <package>org.example.ns.approvalrules</package>
                 <namespace>http://www.example.org/ns/approvalrules</namespace>

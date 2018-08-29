@@ -45,10 +45,10 @@
           location="oramds:/soa/shared/workflow/NotificationService.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
           location="WSDLs/ApprovalRules_DecisionService_1.wsdl" importType="wsdl"/>
-  <import namespace="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1"
-          location="WSDLs/ApprovalRules_DecisionService_1Wrapper.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1"
           location="WSDLs/ShippingRules_DecisionService_1.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1"
+          location="WSDLs/ShippingRules_DecisionService_1Wrapper1.wsdl" importType="wsdl"/>
   <service name="ReceivePO" ui:wsdlLocation="WSDLs/ReceivePO.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/POApplication/POProcessing/ReceivePO#wsdl.endpoint(ReceivePO/execute_pt)">
@@ -111,7 +111,7 @@
         <interface.wsdl interface="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.interface(NotificationService)"/>
       </reference>
       <reference name="ApprovalRules.ApprovalRules_DecisionService_1"
-                 ui:wsdlLocation="WSDLs/ApprovalRules_DecisionService_1Wrapper.wsdl">
+                 ui:wsdlLocation="WSDLs/ApprovalRules_DecisionService_1.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/ApprovalRules/ApprovalRules_DecisionService_1#wsdl.interface(IDecisionService)"/>
       </reference>
     </componentType>
@@ -140,6 +140,10 @@
       </reference>
       <reference name="CustomerService" ui:wsdlLocation="WSDLs/CustomerSDOServiceWrapper.wsdl">
         <interface.wsdl interface="/customersdo/common/#wsdl.interface(CustomerSDOService)"/>
+      </reference>
+      <reference name="ShippingRules.ShippingRules_DecisionService_1"
+                 ui:wsdlLocation="WSDLs/ShippingRules_DecisionService_1Wrapper1.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/ShippingRules/ShippingRules_DecisionService_1#wsdl.interface(IDecisionService)"/>
       </reference>
     </componentType>
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string" many="false">async.persist</property>
@@ -279,6 +283,10 @@
   <wire>
     <source.uri>ApproveCCOrder/NotificationService1</source.uri>
     <target.uri>NotificationService1</target.uri>
+  </wire>
+  <wire>
+    <source.uri>FulfillmentPr/ShippingRules.ShippingRules_DecisionService_1</source.uri>
+    <target.uri>ShippingRules/ShippingRules_DecisionService_1</target.uri>
   </wire>
   <wire>
     <source.uri>ApproveCCOrder/ApprovalRules.ApprovalRules_DecisionService_1</source.uri>

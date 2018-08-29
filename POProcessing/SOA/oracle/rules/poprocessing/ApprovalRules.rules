@@ -7,6 +7,25 @@
   <DataModel id="L}1">
     <CreationUpdateNumber>2</CreationUpdateNumber>
     <QualifierPattern>{member} of {fact}</QualifierPattern>
+    <Variable id="G}-20b01d6d:1658116ae0f:-7c32">
+      <Name>approval_limit</Name>
+      <Alias>approval_limit</Alias>
+      <Visible>true</Visible>
+      <CreationUpdateNumber>8</CreationUpdateNumber>
+      <IDofType>J}double</IDofType>
+      <ListContentID>B}nil</ListContentID>
+      <Type>double</Type>
+      <IDofBucketSet>B}nil</IDofBucketSet>
+      <Expression id="L}46">
+        <Value>4000</Value>
+        <ResolvedValue>4000</ResolvedValue>
+        <IsConstant>true</IsConstant>
+        <ParameterID>B}nil</ParameterID>
+      </Expression>
+      <Final>true</Final>
+      <System>false</System>
+      <ValidationUpdateNumber>13</ValidationUpdateNumber>
+    </Variable>
     <JaxbFactType id="J}org.example.ns.approvalrules.Price">
       <Name>org.example.ns.approvalrules.Price</Name>
       <Alias>price</Alias>
@@ -342,7 +361,7 @@
       <DecisionFunctionRuleSet id="L}42">
         <CreationUpdateNumber>4</CreationUpdateNumber>
         <Form>rule set</Form>
-        <Ruleset>Ruleset1</Ruleset>
+        <Ruleset>Approvalruleset</Ruleset>
         <refID>G}-33e5e527:16577dfa875:-7c2e</refID>
       </DecisionFunctionRuleSet>
       <DecisionFunctionOutput id="G}-33e5e527:16577dfa875:-7c2b">
@@ -354,26 +373,174 @@
         <List>false</List>
         <Tree>false</Tree>
       </DecisionFunctionOutput>
-      <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+      <ValidationUpdateNumber>24</ValidationUpdateNumber>
       <RuleFiringLimit>10000</RuleFiringLimit>
       <RuleFiringLimitError>true</RuleFiringLimitError>
       <UniqueRulesets>false</UniqueRulesets>
     </DecisionFunction>
-    <UpdateNumber>7</UpdateNumber>
-    <ValidationUpdateNumber>-1</ValidationUpdateNumber>
+    <UpdateNumber>13</UpdateNumber>
+    <ValidationUpdateNumber>24</ValidationUpdateNumber>
     <UpdateTime>0</UpdateTime>
   </DataModel>
   <RuleSet id="G}-33e5e527:16577dfa875:-7c2e">
-    <Name>Ruleset1</Name>
-    <Alias>Ruleset1</Alias>
-    <ValidationUpdateNumber>3</ValidationUpdateNumber>
+    <Name>Approvalruleset</Name>
+    <Alias>Approvalruleset</Alias>
+    <ValidationUpdateNumber>39</ValidationUpdateNumber>
     <Active>true</Active>
     <CalendarForm>DateTime</CalendarForm>
+    <Rule id="G}-20b01d6d:1658116ae0f:-7c30">
+      <Name>Abovelimit</Name>
+      <Alias>Abovelimit</Alias>
+      <ValidationUpdateNumber>26</ValidationUpdateNumber>
+      <Priority>medium</Priority>
+      <Active>true</Active>
+      <CalendarForm>DateTime</CalendarForm>
+      <TreeMode>false</TreeMode>
+      <Visible>true</Visible>
+      <SimpleTest id="L}81">
+        <FactType>price</FactType>
+        <IDofFactType>J}org.example.ns.approvalrules.Price</IDofFactType>
+        <FactPath>price</FactPath>
+        <FactPathIDs>L}81</FactPathIDs>
+        <Form>FormIsA</Form>
+        <IDofOperator>B}==</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>false</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <SimpleTest id="L}75">
+        <IDofFactType>B}nil</IDofFactType>
+        <Form>FormNotNested</Form>
+        <Expression id="L}76">
+          <Value>price.totalPrice</Value>
+          <ResolvedValue>`L}81`.`J}org.example.ns.approvalrules.Price.{totalPrice}`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <Expression id="L}77">
+          <Value>approval_limit</Value>
+          <ResolvedValue>`G}-20b01d6d:1658116ae0f:-7c32`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <IDofOperator>B}&gt;</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>true</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <Pattern id="L}68">
+        <IDofFactType>B}nil</IDofFactType>
+        <Form>Fact Type</Form>
+        <Connective>&amp;&amp;</Connective>
+        <TestForm>Simple</TestForm>
+        <Expression id="L}69">
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <Operator>(for each case where)</Operator>
+      </Pattern>
+      <ShowPatterns>false</ShowPatterns>
+      <Logical>false</Logical>
+      <Action id="L}88">
+        <Form>Assert New</Form>
+        <Target>approvalandiscount</Target>
+        <ResolvedTarget>`J}public org.example.ns.approvalrules.Approvalandiscount()`</ResolvedTarget>
+        <Expression id="L}91">
+          <Value>true</Value>
+          <ResolvedValue>true</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>approvalRequired</ParameterAlias>
+          <ParameterID>J}org.example.ns.approvalrules.Approvalandiscount.{approvalRequired}</ParameterID>
+        </Expression>
+        <Expression id="L}92">
+          <Value>0</Value>
+          <ResolvedValue>0</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>discount</ParameterAlias>
+          <ParameterID>J}org.example.ns.approvalrules.Approvalandiscount.{discount}</ParameterID>
+        </Expression>
+        <DSLId>B}nil</DSLId>
+      </Action>
+    </Rule>
+    <Rule id="G}-20b01d6d:1658116ae0f:-7c2f">
+      <Name>Withinlimit</Name>
+      <Alias>Withinlimit</Alias>
+      <ValidationUpdateNumber>39</ValidationUpdateNumber>
+      <Priority>medium</Priority>
+      <Active>true</Active>
+      <CalendarForm>DateTime</CalendarForm>
+      <TreeMode>false</TreeMode>
+      <Visible>true</Visible>
+      <SimpleTest id="L}112">
+        <FactType>price</FactType>
+        <IDofFactType>J}org.example.ns.approvalrules.Price</IDofFactType>
+        <FactPath>price</FactPath>
+        <FactPathIDs>L}112</FactPathIDs>
+        <Form>FormIsA</Form>
+        <IDofOperator>B}==</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>false</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <SimpleTest id="L}107">
+        <IDofFactType>B}nil</IDofFactType>
+        <Form>FormNotNested</Form>
+        <Expression id="L}108">
+          <Value>price.totalPrice</Value>
+          <ResolvedValue>`L}112`.`J}org.example.ns.approvalrules.Price.{totalPrice}`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <Expression id="L}109">
+          <Value>approval_limit</Value>
+          <ResolvedValue>`G}-20b01d6d:1658116ae0f:-7c32`</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <IDofOperator>B}&lt;=</IDofOperator>
+        <Connective>&amp;&amp;</Connective>
+        <Visible>true</Visible>
+        <DSLId>B}nil</DSLId>
+      </SimpleTest>
+      <Pattern id="L}99">
+        <IDofFactType>B}nil</IDofFactType>
+        <Form>Fact Type</Form>
+        <Connective>&amp;&amp;</Connective>
+        <TestForm>Simple</TestForm>
+        <Expression id="L}100">
+          <IsConstant>false</IsConstant>
+          <ParameterID>B}nil</ParameterID>
+        </Expression>
+        <Operator>(for each case where)</Operator>
+      </Pattern>
+      <ShowPatterns>false</ShowPatterns>
+      <Logical>false</Logical>
+      <Action id="L}119">
+        <Form>Assert New</Form>
+        <Target>approvalandiscount</Target>
+        <ResolvedTarget>`J}public org.example.ns.approvalrules.Approvalandiscount()`</ResolvedTarget>
+        <Expression id="L}122">
+          <Value>false</Value>
+          <ResolvedValue>false</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>approvalRequired</ParameterAlias>
+          <ParameterID>J}org.example.ns.approvalrules.Approvalandiscount.{approvalRequired}</ParameterID>
+        </Expression>
+        <Expression id="L}123">
+          <Value>0</Value>
+          <ResolvedValue>0</ResolvedValue>
+          <IsConstant>false</IsConstant>
+          <ParameterAlias>discount</ParameterAlias>
+          <ParameterID>J}org.example.ns.approvalrules.Approvalandiscount.{discount}</ParameterID>
+        </Expression>
+        <DSLId>B}nil</DSLId>
+      </Action>
+    </Rule>
     <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
     <CreationUpdateNumber>3</CreationUpdateNumber>
   </RuleSet>
-  <ValidationUpdateNumber>-1</ValidationUpdateNumber>
-  <UpdateNumber>7</UpdateNumber>
+  <ValidationUpdateNumber>39</ValidationUpdateNumber>
+  <UpdateNumber>39</UpdateNumber>
   <ResourceBundle>ApprovalRulesTranslations</ResourceBundle>
   <TestModel id="L}3">
     <ValidationUpdateNumber>1</ValidationUpdateNumber>
